@@ -1,0 +1,11 @@
+name: User Role Config
+description: 'Ce module contient toutes les configuirations nécessaire au bon fonctionnement des roles et des champs utilisateurs sur le projet coding game'
+package: Custom
+# dependencies:
+#   - paragraphs (>=8.x-1.2)
+#   - route_condition (>=8.x-1.0-alpha2)
+type: module
+version: VERSION
+core: '8.x'
+
+

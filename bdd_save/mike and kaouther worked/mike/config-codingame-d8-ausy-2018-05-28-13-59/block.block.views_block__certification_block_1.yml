@@ -1,0 +1,43 @@
+uuid: 9751afee-6ca3-40d4-8451-d210a9711d20
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.certification
+  module:
+    - ctools
+    - user
+    - views
+  theme:
+    - bootstrap_child
+_core:
+  default_config_hash: GX5HQQnEIWPklHrPBiY5_NVyAbSiwOVfNUHQaiGSeyM
+id: views_block__certification_block_1
+theme: bootstrap_child
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:certification-block_1'
+settings:
+  id: 'views_block:certification-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      certification_d8: certification_d8
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      drupalien: drupalien
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

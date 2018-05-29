@@ -1,0 +1,22 @@
+uuid: d66b1c8b-54be-405a-a500-cdad50402dc9
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+_core:
+  default_config_hash: CBLc2PfJKbe7siabbqxM1haqodfoJIbFgnYgHtVvlC0
+id: paragraph.field_course_date_end
+field_name: field_course_date_end
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,32 @@
+uuid: 2b83087d-5857-4ab2-bc7d-1a7a42f53cc5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.certification
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap_child
+_core:
+  default_config_hash: IyylIvOjSHYeeVMBLIVKbTRrFTHPd8jwOjGtVhVORQI
+id: views_block__certification_block_page_profil_drupalien
+theme: bootstrap_child
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:certification-block_page_profil_drupalien'
+settings:
+  id: 'views_block:certification-block_page_profil_drupalien'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

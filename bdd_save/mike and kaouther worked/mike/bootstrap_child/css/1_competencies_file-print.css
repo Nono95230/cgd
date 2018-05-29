@@ -1,0 +1,115 @@
+/* line 2, ../scss/1_competencies_file-print.scss */
+#navbar,
+#toolbar-administration,
+.tabs,
+.region-header,
+.page-header,
+.contextual,
+footer,
+.highlighted,
+#user-profile-print-btn,
+article .field--name-field-competencies-file-jobtitle,
+article .field--name-field-competencies-file-xp-year {
+  display: none !important;
+}
+
+@page :first {
+  margin: 0.5cm;
+}
+@page {
+  margin: 1.5cm 0.8cm;
+}
+/* line 26, ../scss/1_competencies_file-print.scss */
+#print_bg {
+  display: block !important;
+}
+/* line 28, ../scss/1_competencies_file-print.scss */
+#print_bg #print_logo {
+  margin: 1.5cm 1cm;
+}
+
+/* line 33, ../scss/1_competencies_file-print.scss */
+#print_new_element {
+  display: block !important;
+  position: absolute;
+  left: 0;
+  top: 6.75cm;
+}
+/* line 38, ../scss/1_competencies_file-print.scss */
+#print_new_element #print_dc {
+  width: 400px;
+  font-size: 5rem;
+  margin-left: 1.5cm;
+}
+/* line 43, ../scss/1_competencies_file-print.scss */
+#print_new_element #print_consultant_primary_info {
+  margin-top: 10cm;
+  margin-left: 0.5cm;
+}
+/* line 46, ../scss/1_competencies_file-print.scss */
+#print_new_element #print_consultant_primary_info #print_identity,
+#print_new_element #print_consultant_primary_info .field--name-field-competencies-file-jobtitle,
+#print_new_element #print_consultant_primary_info .field--name-field-competencies-file-xp-year {
+  margin-bottom: 10px;
+}
+/* line 51, ../scss/1_competencies_file-print.scss */
+#print_new_element #print_consultant_primary_info .field--name-field-competencies-file-xp-year {
+  page-break-after: always;
+}
+
+/* line 59, ../scss/1_competencies_file-print.scss */
+.paragraph--type--ptype-competence-technique,
+.paragraph--type--ptype-experience-pro,
+.paragraph--type--ptype-formation-diplome,
+.paragraph--type--ptype-langue,
+.field--name-field-competencies-file-skill,
+.field--name-field-competencies-file-course,
+.field--name-field-competencies-file-language {
+  page-break-inside: avoid;
+}
+
+/* line 91, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique {
+  flex-direction: row !important;
+}
+/* line 93, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique .field--name-field-skill-section {
+  flex: 1.4 !important;
+}
+
+/* line 109, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items {
+  flex-direction: row !important;
+}
+/* line 112, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .xp-pro-header-enterprise {
+  order: 2;
+}
+/* line 115, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .xp-pro-header-date {
+  order: 1;
+  text-align: left !important;
+}
+/* line 119, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .xp-pro-header-job_name {
+  order: 3;
+  text-align: right !important;
+}
+
+/* line 140, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items {
+  flex-direction: row !important;
+}
+/* line 143, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-date {
+  flex: 1 !important;
+}
+
+/* line 158, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue {
+  flex-direction: row !important;
+}
+/* line 160, ../scss/1_competencies_file-print.scss */
+article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue .field--name-field-language-name {
+  flex: 1 !important;
+}

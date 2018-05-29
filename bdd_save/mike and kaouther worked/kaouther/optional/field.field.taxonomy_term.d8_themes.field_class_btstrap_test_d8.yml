@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_class_btstrap_test_d8
+    - taxonomy.vocabulary.d8_themes
+id: taxonomy_term.d8_themes.field_class_btstrap_test_d8
+field_name: field_class_btstrap_test_d8
+entity_type: taxonomy_term
+bundle: d8_themes
+label: 'Class Bootstrap Color'
+description: ' '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_upload
+    - node.type.news_d8
+  module:
+    - video
+id: node.news_d8.field_video_upload
+field_name: field_video_upload
+entity_type: node
+bundle: news_d8
+label: Vidéo
+description: 'Chargez dans ce champs le fichier vidéo que vous souhaitez partager'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'news/videos/upload/[date:custom:Y]-[date:custom:m]/[date:custom:d]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

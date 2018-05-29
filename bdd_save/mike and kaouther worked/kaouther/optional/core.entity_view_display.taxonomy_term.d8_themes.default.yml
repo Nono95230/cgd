@@ -1,0 +1,31 @@
+uuid: 677feea8-8125-4c29-b4ad-072c1c601584
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.d8_themes.field_class_btstrap_test_d8
+    - taxonomy.vocabulary.d8_themes
+  module:
+    - text
+id: taxonomy_term.d8_themes.default
+targetEntityType: taxonomy_term
+bundle: d8_themes
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_class_btstrap_test_d8:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

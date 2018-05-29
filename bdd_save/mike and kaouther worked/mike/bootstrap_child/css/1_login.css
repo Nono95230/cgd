@@ -1,0 +1,38 @@
+/* line 1, ../scss/1_login.scss */
+body.path-frontpage {
+  background-color: #3B4253;
+}
+/* line 4, ../scss/1_login.scss */
+body.path-frontpage .tabs {
+  display: none;
+}
+/* line 7, ../scss/1_login.scss */
+body.path-frontpage h1.page-header {
+  text-align: right;
+  color: #fff;
+  font-size: 1em;
+  margin-bottom: 8px;
+  position: relative;
+  overflow: hidden;
+}
+/* line 14, ../scss/1_login.scss */
+body.path-frontpage h1.page-header:before {
+  border-bottom: 1px solid #fff;
+  content: "";
+  width: 100%;
+  position: absolute;
+  right: 80px;
+  top: 14px;
+}
+/* line 23, ../scss/1_login.scss */
+body.path-frontpage form.user-login-form {
+  background-color: #FFFFFF;
+  padding: 50px 50px 50px 50px;
+}
+/* line 26, ../scss/1_login.scss */
+body.path-frontpage form.user-login-form .help-block {
+  color: #0678be;
+  font-size: 14px;
+  margin: 5px 0 10px;
+  padding: 0;
+}

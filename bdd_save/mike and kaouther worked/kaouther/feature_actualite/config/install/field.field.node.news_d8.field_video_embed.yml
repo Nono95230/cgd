@@ -1,0 +1,25 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_embed
+    - node.type.news_d8
+  module:
+    - video
+id: node.news_d8.field_video_embed
+field_name: field_video_embed
+entity_type: node
+bundle: news_d8
+label: Vidéo
+description: 'Renseigner l''url de la vidéo à partager (youtube, dailymotion, viméo)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'news/videos/embed/[date:custom:Y]-[date:custom:m]/[date:custom:d]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

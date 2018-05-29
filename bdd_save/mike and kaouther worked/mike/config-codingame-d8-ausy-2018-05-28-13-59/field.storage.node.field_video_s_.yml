@@ -1,0 +1,21 @@
+uuid: 89f94d4f-14dd-43a0-b6db-7c72d964e20d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - video_embed_field
+_core:
+  default_config_hash: 1v-e82XpEWGIXpYBMxtz_H-wpRiM30hKZpb7_xOx9nw
+id: node.field_video_s_
+field_name: field_video_s_
+entity_type: node
+type: video_embed_field
+settings: {  }
+module: video_embed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

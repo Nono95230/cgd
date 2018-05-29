@@ -1,0 +1,26 @@
+name: 'Feature Actualite'
+description: 'Type de contenu et la vue'
+type: module
+core: 8.x
+dependencies:
+  - audiofield
+  - autocomplete_deluxe
+  - block
+  - colorbox
+  - comment
+  - conditional_fields
+  - field
+  - file
+  - image
+  - language
+  - menu_ui
+  - node
+  - options
+  - path
+  - system
+  - taxonomy
+  - text
+  - user
+  - video
+  - views
+  - views_slideshow

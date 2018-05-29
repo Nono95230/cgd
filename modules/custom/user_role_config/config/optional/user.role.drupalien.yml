@@ -1,0 +1,9 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: drupalien
+label: Drupalien
+weight: -7
+is_admin: null
+permissions:
+  - 'edit own competencies_file content'

@@ -1,0 +1,22 @@
+uuid: ae4f895d-8fa9-4914-9d67-ae67f25836f6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: HpzYvZWletDmC9-URhdrDwicHdYcu-UtrHG9ncHsV_A
+id: node.field_score
+field_name: field_score
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

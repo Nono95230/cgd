@@ -1,0 +1,21 @@
+uuid: c8158fd4-1754-49a1-96d5-742d8d1decd6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_course_description
+    - paragraphs.paragraphs_type.ptype_formation_diplome
+  module:
+    - text
+id: paragraph.ptype_formation_diplome.field_course_description
+field_name: field_course_description
+entity_type: paragraph
+bundle: ptype_formation_diplome
+label: Descriptif
+description: 'Indiquer ici une brève description de votre formation'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: e5e7cc6f-bed9-40cd-bfe3-1862dc7ab42f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_xp_pro_date_end
+    - paragraphs.paragraphs_type.ptype_experience_pro
+  module:
+    - datetime
+_core:
+  default_config_hash: EMYdQPbloZ79CoJVXgC_jOrUdXlqK7s269NHyLyte4o
+id: paragraph.ptype_experience_pro.field_xp_pro_date_end
+field_name: field_xp_pro_date_end
+entity_type: paragraph
+bundle: ptype_experience_pro
+label: 'Date de fin'
+description: "Indiquez la date de fin de la mission.\r\nSi cette mission est toujours en cours, ne renseignez pas de date et cochez la case \"Poste Actuel\" !"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

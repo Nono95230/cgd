@@ -1,0 +1,13 @@
+uuid: b1e06c10-81de-4844-9e6b-1ba67be4953c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.evenement
+_core:
+  default_config_hash: ua-PPvJhyzmiaSXffHm_dxcO7QB9rFp1uNofNa-9__U
+id: node.evenement
+target_entity_type_id: node
+target_bundle: evenement
+default_langcode: site_default
+language_alterable: false

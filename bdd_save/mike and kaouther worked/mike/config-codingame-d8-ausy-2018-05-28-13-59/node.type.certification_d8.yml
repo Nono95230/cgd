@@ -1,0 +1,19 @@
+uuid: abda441d-cd25-4969-9b7b-147ad228f980
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: Vp8gezuNe_kn3pS6FxKCRu7g6F0hMop4UmIDTuCXU5A
+name: Certification
+type: certification_d8
+description: 'Utilisez les certifications pour indiquer qu''un utilisateur a obtenu une certification'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

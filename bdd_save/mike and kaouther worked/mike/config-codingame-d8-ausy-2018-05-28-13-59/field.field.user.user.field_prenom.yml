@@ -1,0 +1,22 @@
+uuid: 724e1fdf-28a4-4858-a88e-5ecd00a14b1c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_prenom
+  module:
+    - user
+_core:
+  default_config_hash: qpMSxfFL7Jz5fcZ_MvueMzP2BT6xqOp_63IMznnoQaY
+id: user.user.field_prenom
+field_name: field_prenom
+entity_type: user
+bundle: user
+label: Prenom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,38 @@
+uuid: 3f225550-05ca-4602-a523-6c5b296fd1c1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.test.field_questions
+    - field.field.node.test.field_theme
+    - node.type.test
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: Q4M-c5iYIAFmr2Hg9ttrlQ4IrMuW_Lrg5-b6h1VBgIM
+id: node.test.default
+targetEntityType: node
+bundle: test
+mode: default
+content:
+  field_questions:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_theme:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true
+  links: true

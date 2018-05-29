@@ -1,0 +1,38 @@
+uuid: bedf4e77-d009-4982-8062-66423cd989b5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lieu
+    - node.type.evenement
+  module:
+    - address
+_core:
+  default_config_hash: 7ZnF8lKlt9rwyfGApgGDj-ZgKgP2MgLNGz5z1z8WpKQ
+id: node.evenement.field_lieu
+field_name: field_lieu
+entity_type: node
+bundle: evenement
+label: Lieu
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    FR: FR
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    sortingCode: sortingCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    organization: organization
+    givenName: givenName
+    additionalName: additionalName
+    familyName: familyName
+  langcode_override: ''
+field_type: address

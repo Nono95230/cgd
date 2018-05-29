@@ -1,0 +1,10 @@
+uuid: 32b9763e-a7e2-49e3-84c0-3d97675a851f
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: gXR3jICJ2CQiMoMZSVj_-GQwFsuqOfOZe2o5xxHBbMM
+id: commentaires_evenement
+label: 'Commentaires évenement'
+target_entity_type_id: node
+description: 'commentaires sur l''événement en cours'

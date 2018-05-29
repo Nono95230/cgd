@@ -1,0 +1,40 @@
+uuid: ba85bc59-e9cd-42ed-99a1-8cb9617a2eb6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.certification
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__certification_block_3
+theme: bootstrap_child
+region: content
+weight: 2
+provider: null
+plugin: 'views_block:certification-block_3'
+settings:
+  id: 'views_block:certification-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '5'
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

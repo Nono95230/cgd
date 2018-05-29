@@ -1,0 +1,64 @@
+hook_install:
+  vocabulary: 'langues'
+  terms_language:
+    - Allemand
+    - Anglais
+    - Arabe
+    - Chinois
+    - Espagnol
+    - Français
+    - Indien
+    - Italien
+    - Japonais
+    - Portugais
+hook_entity_type_presave:
+  roles: 
+    - drupalien
+    - manager
+  message_error_roles: 
+    - 'Les rôles Manager et Drupalien ne peuvent être activés simultanément.'
+    - 'Ces deux rôles ont été désactivés pour l''utilisateur USERNAME !'
+    - 'Pensez à remettre le rôle désiré pour cet utilisateur.'
+  role: 'drupalien'
+  paragraph_type: 'ptype_competence_technique'
+  content_type: 'competencies_file'
+  content_title: 'Dossier de compétences - Prénom Nom'
+  job_title: 'Développeur Drupal 8'
+  message_success_competency_file_create: 'Un dossier de compétences a été créé pour l''utilisateur USERNAME'
+ptype_competence_technique:
+  1:
+    skill_section: "Méthodologies"
+    skill_competences: "Agile/Scrum"
+  2:
+    skill_section: "Modélisation"
+    skill_competences: "Merise, UML"
+  3:
+    skill_section: "Langages"
+    skill_competences: "Html5, Css3, JavaScript, Php5 & 7"
+  4:
+    skill_section: "Librairies CSS & JS"
+    skill_competences: "Bootstrap, Materialize, jQuery"
+  5:
+    skill_section: "Frameworks"
+    skill_competences: "Symfony2, Laravel5, AngularJS, Cordova"
+  6:
+    skill_section: "CMS/CMF"
+    skill_competences: "Wordpress, Drupal7, Drupal8"
+  7:
+    skill_section: "API"
+    skill_competences: "Canvas, Google Maps"
+  8:
+    skill_section: "Compétences Drupal 8"
+    skill_competences: "Webmaster, Themer, Développement Drupal, Performance & Sécurité"
+  9:
+    skill_section: "Compétences additionnelles"
+    skill_competences: "Sass avec Compass/Gulp, Responsive Design"
+  10:
+    skill_section: "Outils de développement"
+    skill_competences: "SublimeText, Git, Trello, Platform, Jira, Redmine, Cmder"
+  11:
+    skill_section: "SGBD"
+    skill_competences: "MySql"
+  12:
+    skill_section: "Systèmes"
+    skill_competences: "Mac OS, Windows, Ubuntu"

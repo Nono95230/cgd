@@ -1,0 +1,25 @@
+uuid: 7cd1fb1a-905f-476a-9d53-666885e49f9f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - node
+_core:
+  default_config_hash: 21ztDi-fHk-noTxuN8qVO2l89jW3mcWzfjoCXtlFR9o
+id: node.field_audio
+field_name: field_audio
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

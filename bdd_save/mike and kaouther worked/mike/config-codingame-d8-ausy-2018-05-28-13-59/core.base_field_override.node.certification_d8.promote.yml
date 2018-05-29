@@ -1,0 +1,24 @@
+uuid: a9708ee7-4a55-44a3-b97b-d87692f4f85b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.certification_d8
+_core:
+  default_config_hash: pqzMtrwJI_NHCoBevDsuNQt1b6mUajVd8LwnFhsnOLg
+id: node.certification_d8.promote
+field_name: promote
+entity_type: node
+bundle: certification_d8
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

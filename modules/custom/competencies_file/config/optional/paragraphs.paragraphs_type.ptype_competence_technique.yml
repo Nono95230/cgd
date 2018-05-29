@@ -1,0 +1,11 @@
+uuid: 1bb7a775-b054-41b0-bde1-44f36b3d82aa
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: e1K7nDO43F28zfaIC1pBzZwHSWmcGemkfkFcZN7LT9Y
+id: ptype_competence_technique
+label: 'Compétence technique'
+icon_uuid: null
+description: 'Ce paragraph type sert à paramétrer les champs servant à compléter la partie Compétences Techniques du Dossier de Compétence'
+behavior_plugins: {  }

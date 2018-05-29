@@ -1,0 +1,8 @@
+
+//mixin border-radius pour tous les operateurs 
+@mixin border-radius($radius) {
+	-webkit-border-radius-: $radius;
+	-moz-border-radius-: $radius;
+	-o-border-radius-: $radius;
+		border-radius: $radius;
+}

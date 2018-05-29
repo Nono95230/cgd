@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencies_file_course
+    - node.type.competencies_file
+    - paragraphs.paragraphs_type.ptype_formation_diplome
+  module:
+    - entity_reference_revisions
+id: node.competencies_file.field_competencies_file_course
+field_name: field_competencies_file_course
+entity_type: node
+bundle: competencies_file
+label: 'Formations & Diplômes'
+description: 'Cette partie sert à saisir l''ensemble des informations liées à une formation ou à un diplôme'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ptype_formation_diplome: ptype_formation_diplome
+    target_bundles_drag_drop:
+      paragraphs_type_questions:
+        weight: 6
+        enabled: false
+      ptype_competence_technique:
+        weight: 7
+        enabled: false
+      ptype_experience_pro:
+        weight: 8
+        enabled: false
+      ptype_formation_diplome:
+        enabled: true
+        weight: 9
+      ptype_langue:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

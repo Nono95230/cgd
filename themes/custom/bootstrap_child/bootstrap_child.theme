@@ -1,0 +1,153 @@
+<?php
+
+
+
+function bootstrap_child_theme($existing, $type, $theme, $path){
+  return [
+    /////////////////////////////////////////
+    //               Test D8               //
+    //            Custom Actions           //
+    //                START                //
+    /////////////////////////////////////////
+
+    'chart_tests_drupal8' => [
+      'template' => 'chart-tests-drupal8',
+      'variables' => ['data' => NULL]
+    ],
+    'timer_qcm_test_drupal8' => [
+      'template' => 'timer-qcm-test-drupal8',
+      'variables' => ['data' => NULL]
+    ]
+
+    /////////////////////////////////////////
+    //               Test D8               //
+    //            Custom Actions           //
+    //                 END                 //
+    /////////////////////////////////////////
+  ];
+}
+
+
+
+function bootstrap_child_page_attachments_alter(array &$attachments){
+	$routeName = \Drupal::routeMatch()->getRouteName();
+
+  /////////////////////////////////////////
+  //               Test D8               //
+  //            Custom Actions           //
+  //                START                //
+  /////////////////////////////////////////
+
+  if ($routeName == 'test_drupal8.qcm' ||
+    $routeName == 'view.tests_drupal_8.page_1' ||
+    $routeName == 'view.tests_drupal_8.page_2' ||
+    $routeName == 'entity.user.canonical' )
+  {
+    $attachments['#attached']['library'][] = 'bootstrap_child/test-drupal8-styles';
+  }
+  if ($routeName == 'test_drupal8.qcm'){
+    $attachments['#attached']['library'][] = 'bootstrap_child/test-drupal8-qcm';
+  }
+  if ($routeName == 'entity.user.canonical' ){
+    $attachments['#attached']['library'][] = 'bootstrap_child/tests-drupal8-dashboard';
+  }
+
+  /////////////////////////////////////////
+  //               Test D8               //
+  //            Custom Actions           //
+  //                 END                 //
+  /////////////////////////////////////////
+
+	/////////////////////////////////////////
+	//          Competencies File          //
+	//            Custom Actions           //
+	//                START                //
+	/////////////////////////////////////////
+
+  if ($routeName == 'entity.user.canonical'){
+    $attachments['#attached']['library'][] = 'bootstrap_child/user-account';
+  }
+
+	/////////////////////////////////////////
+	//          Competencies File          //
+	//            Custom Actions           //
+	//                 END                 //
+	/////////////////////////////////////////
+
+}
+
+
+function bootstrap_child_preprocess_node(&$variables){
+
+  $contentType 	= $variables['node']->getType();
+  $nodeTitle 		= $variables['node']->getTitle();
+  $routeName    = \Drupal::routeMatch()->getRouteName();
+  $themePath 		= drupal_get_path('theme', 'bootstrap_child');
+
+	/////////////////////////////////////////
+	//          Competencies File          //
+	//            Custom Actions           //
+	//                START                //
+	/////////////////////////////////////////
+
+  if ( $contentType == 'competencies_file' && $routeName == 'entity.node.canonical' ) {
+    $limiter = ' - ';
+    $parts = explode($limiter,$nodeTitle);
+
+    $variables['new_element']['field_competencies_file_dc'] = array(
+      '#type' => 'html_tag',
+      '#tag' => 'h1',
+      '#value' => array_shift($parts),
+      '#attributes' => array(
+        'id' => 'print_dc'
+      )
+    );
+
+    $variables['new_element']['field_competencies_file_consultant_identity'] = array(
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#value' => implode($limiter, $parts),
+      '#attributes' => array(
+        'id' => 'print_identity'
+      )
+    );
+
+    $variables['path_logo'] = '/'.$themePath.'/images/logo_ausy.png';
+  }
+
+	/////////////////////////////////////////
+	//          Competencies File          //
+	//            Custom Actions           //
+	//                 END                 //
+	/////////////////////////////////////////
+
+}
+
+
+function bootstrap_child_theme_suggestions_alter(array &$suggestions, array $variables, $hook){
+
+	$routeName = \Drupal::routeMatch()->getRouteName();
+
+	/////////////////////////////////////////
+	//          Competencies File          //
+	//            Custom Actions           //
+	//                START                //
+	/////////////////////////////////////////
+
+  // Add Templates Suggestions for competencies file field
+  // of type entity reference revisions
+  if ( $hook == "field" && isset($variables['element']) ) {
+    $element = $variables['element'];
+    if ($element['#field_type'] == "entity_reference_revisions" && $element['#bundle'] == 'competencies_file') {
+      // Example : 'field--node--comptencies_file--field--ptype'
+      $suggestions[] = $hook.'__'.$element['#entity_type'].'__'.$element['#bundle'].'__'.$hook.'__'.'ptype';
+    }
+  }
+
+	/////////////////////////////////////////
+	//          Competencies File          //
+	//            Custom Actions           //
+	//                 END                 //
+	/////////////////////////////////////////
+
+}

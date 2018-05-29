@@ -1,0 +1,23 @@
+uuid: bab89568-ec31-44ed-86bd-f6f4fdda4fa3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_language_level
+    - paragraphs.paragraphs_type.ptype_langue
+  module:
+    - options
+_core:
+  default_config_hash: dmDb0VG9qVwkUrxZqm8OFZEI4py-U5bkk-dP9UOBY3M
+id: paragraph.ptype_langue.field_language_level
+field_name: field_language_level
+entity_type: paragraph
+bundle: ptype_langue
+label: Niveau
+description: 'Indiquer le niveau de pratique pour cette langue '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

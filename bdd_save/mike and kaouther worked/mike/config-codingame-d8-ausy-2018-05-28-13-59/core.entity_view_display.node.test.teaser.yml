@@ -1,0 +1,39 @@
+uuid: f279847f-26b7-4d84-99b3-89439725e102
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.test.field_questions
+    - field.field.node.test.field_theme
+    - node.type.test
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: bPvb8gIU-t-EYEhJdGD35iuOStoYbP4EdtI1063OGV8
+id: node.test.teaser
+targetEntityType: node
+bundle: test
+mode: teaser
+content:
+  field_questions:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_theme:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,152 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\NodeType;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function competencies_file_help($route_name, RouteMatchInterface $route_match){
+  switch ($route_name) {
+    case 'help.page.competencies_file':
+      $output  = '';
+      $output .= '<h3>'.t('About').'</h3>';
+      $output .= '<p>'.t('Please send help').'</p>';
+
+      return $output;
+  }
+}
+
+
+
+function competencies_file_user_presave(EntityInterface $entity){
+	// On créé certaines variables de config
+	// (cf. competencies_file.config.yml)
+	$config 		= \Drupal::config('competencies_file.config')->get('hook_entity_type_presave');
+	$roles 			= $config['roles'];
+	$userRoles 		= $entity->getRoles();
+	$userName 		= $entity->getDisplayName();
+	$hasTwoRoles 	= false;
+
+	// On vérifie que les roles drupalien et manager
+	// ne sont pas activés simultanément
+	if ( in_array( $roles[0], $userRoles ) && in_array( $roles[1], $userRoles ) ) {
+		$hasTwoRoles = true;
+	}
+
+	// Si oui =>
+	if ($hasTwoRoles) {
+
+		// Alors on lui retire les 2 roles
+		foreach ($roles as $role) {
+			$entity->removeRole($role);
+		}
+
+		$messagesErrorRoles = $config['message_error_roles'];
+
+		// Et on le signale via un message
+		foreach ($messagesErrorRoles as $message) {
+	        \Drupal::messenger()->addMessage( str_replace('USERNAME', $userName, $message ), 'error');
+		}
+
+	}
+	
+	// On créé certaines variables de config
+	// (cf. competencies_file.config.yml)
+	$role = $config['role'];
+	$contentType = $config['content_type'];
+	$jobTitle = $config['job_title'];
+	$contentTitle = $config['content_title'];
+	$userId = $entity->id();
+
+	// On vérifie que l'utilisateur possède bien le rôle drupalien
+	if (in_array($role, $entity->getRoles())) {
+
+		// On vérifie que le type de contenu "Dossier de compétences" existe bien
+		if (NodeType::load($contentType)  != null) {
+
+			$nids = \Drupal::entityQuery('node')
+						->condition('type', $contentType)
+						->condition('uid', $userId)
+						->execute();
+						
+			$hasNotCompetencyFile = empty($nids);
+
+			// On vérifie que l'utilisateur ne possède pas déjà un dossier de compétences
+			if ($hasNotCompetencyFile) {
+
+				$userNom = $entity->get('field_nom')->getString();
+				$userPrenom = $entity->get('field_prenom')->getString();
+				// On ré-édit le titre du contenu si les champs de l'utilisateur 
+				// nom et prénom sont renseignés
+				if ( strlen($userNom) >= 2 && strlen($userPrenom) >= 2 ) {
+					$contentTitle = str_replace('Prénom', $userPrenom, str_replace('Nom', $userNom, $contentTitle));
+				}
+
+				// Création d'un tableau de donnée 
+				// pour la création d'un dossier de compétences
+				$data = array(
+					'type'=> $contentType,
+					'title' => $contentTitle,
+					'uid' => $userId,
+					'field_competencies_file_jobtitle' => $jobTitle,
+					'field_competencies_file_skill' => "cetteValeurSeraOverRider, don't delete"
+				);
+				createCompetencyFile($data);
+				$messageSuccess = str_replace('USERNAME', $userName, $config['message_success_competency_file_create'] );
+	        	\Drupal::messenger()->addMessage( $messageSuccess, 'status');
+			}
+			
+		}
+	}
+
+}
+
+function createCompetencyFile($data){
+
+	// En premier, on créé les contenus de type Paragraphs,
+	// qui seront ensuite liés au contenu Dossier de compétences.
+	// Et on retourne la valeur à insérer dans le contenu
+	$data['field_competencies_file_skill'] = createParagraph($data['uid']);
+
+	// Puis on créé le contenu Dossier de compétences
+	$node = Node::create($data);
+
+	$node->save();
+}
+
+function createParagraph($userId){
+
+	$config = \Drupal::config('competencies_file.config');
+	$paraFieldName = $config->get('hook_entity_type_presave.paragraph_type');
+	$configParas = $config->get($paraFieldName);
+	$paraFormattedValue = [];
+
+	foreach ($configParas as $configPara) {
+
+	  $paragraph = Paragraph::create([
+	      'type' => $paraFieldName,
+	      'uid' => [
+	          'target_id' => $userId
+	      ],
+	      'field_skill_section' => [
+	          'value' => $configPara['skill_section']
+	      ],
+	      'field_skill_competences' => [
+	          'value' => $configPara['skill_competences']
+	      ],
+	  ]);
+	  $paragraph->save();
+
+	  $paraFormattedValue[] = array(
+      'target_id' => $paragraph->id(),
+      'target_revision_id' => $paragraph->getRevisionId(),
+	  );
+	}
+
+	return $paraFormattedValue;
+}
+

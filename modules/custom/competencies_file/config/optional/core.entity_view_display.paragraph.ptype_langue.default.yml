@@ -1,0 +1,33 @@
+uuid: eb8f7202-6d5c-4293-910b-36282c6493ff
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ptype_langue.field_language_level
+    - field.field.paragraph.ptype_langue.field_language_name
+    - paragraphs.paragraphs_type.ptype_langue
+  module:
+    - options
+_core:
+  default_config_hash: RIZOHktriS4yopK_FRFXTRrHv1-tvmKfFWLBVDjYrgM
+id: paragraph.ptype_langue.default
+targetEntityType: paragraph
+bundle: ptype_langue
+mode: default
+content:
+  field_language_level:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_language_name:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

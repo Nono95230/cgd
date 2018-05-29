@@ -1,0 +1,21 @@
+uuid: 08602287-9539-4b3f-84c7-4f1d9963d620
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: g276-TTh_sEGHzRfIUjDfhyszlt5zlJ0dPbt9c74h7Q
+id: user.field_manager
+field_name: field_manager
+entity_type: user
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

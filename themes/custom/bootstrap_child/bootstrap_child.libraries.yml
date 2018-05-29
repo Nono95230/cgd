@@ -1,0 +1,42 @@
+base:
+  css:
+    theme:
+      css/style.css: {}
+
+user-account:
+  css:
+    theme:
+      css/1_user-account.css: {}
+
+competencies_file:
+  css:
+    theme:
+      css/1_competencies_file-screen.css: {}
+      css/1_competencies_file-print.css: { media : print }
+
+# Tests D8
+test-drupal8-styles:
+  version: VERSION
+  css:
+    theme:
+      css/1_tests-drupal8.css: {}
+
+test-drupal8-qcm:
+  version: VERSION
+  js:
+    js/timer-qcm-test-drupal8.js: {}
+    js/qcm-test-drupal8.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+
+tests-drupal8-dashboard:
+  version: VERSION
+  js:
+    https://code.highcharts.com/stock/highstock.js: { minified: true, external: true }
+    js/user-dashboard-tests-drupal8.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

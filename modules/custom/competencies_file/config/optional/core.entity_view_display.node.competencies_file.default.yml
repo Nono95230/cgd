@@ -1,0 +1,81 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.competencies_file.field_competencies_file_course
+    - field.field.node.competencies_file.field_competencies_file_jobtitle
+    - field.field.node.competencies_file.field_competencies_file_language
+    - field.field.node.competencies_file.field_competencies_file_skill
+    - field.field.node.competencies_file.field_competencies_file_xp_pro
+    - field.field.node.competencies_file.field_competencies_file_xp_year
+    - node.type.competencies_file
+  module:
+    - datetime
+    - entity_reference_revisions
+    - user
+id: node.competencies_file.default
+targetEntityType: node
+bundle: competencies_file
+mode: default
+content:
+  field_competencies_file_course:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_competencies_file_jobtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_competencies_file_language:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_competencies_file_skill:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_competencies_file_xp_pro:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_competencies_file_xp_year:
+    weight: 2
+    label: hidden
+    settings:
+      future_format: 'Date invalide'
+      past_format: '@interval d''expérience'
+      granularity: 2
+    third_party_settings: {  }
+    type: datetime_time_ago
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

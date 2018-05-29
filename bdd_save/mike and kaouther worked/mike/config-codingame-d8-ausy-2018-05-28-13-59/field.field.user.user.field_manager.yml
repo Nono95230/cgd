@@ -1,0 +1,31 @@
+uuid: 684983b4-ae4e-4c9a-b32c-370440b1f556
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_manager
+  module:
+    - user
+_core:
+  default_config_hash: zqUBUumxNN7xd8yh581Xpccm0oHdJKkLomo6X5RSHLc
+id: user.user.field_manager
+field_name: field_manager
+entity_type: user
+bundle: user
+label: Manager
+description: 'responsable Ingenieur'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

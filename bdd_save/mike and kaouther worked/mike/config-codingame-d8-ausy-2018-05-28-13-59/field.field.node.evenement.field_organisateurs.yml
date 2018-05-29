@@ -1,0 +1,30 @@
+uuid: 387fbd33-66ea-4a99-b425-6b7ae85a9fb8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organisateurs
+    - node.type.evenement
+_core:
+  default_config_hash: zZ9YYTjCFQqlQW6Yxa827UuWgXX7TaaaSs03eI35lFI
+id: node.evenement.field_organisateurs
+field_name: field_organisateurs
+entity_type: node
+bundle: evenement
+label: Organisateurs
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

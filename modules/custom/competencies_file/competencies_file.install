@@ -1,0 +1,71 @@
+<?php
+
+/** @file ...*/
+
+
+function competencies_file_install(){
+
+	//////////////////////////////////////////////////////
+	//                                                  //
+  //                Générer les termes                //
+  //        du vocabulaire de taxonomie Langue        //
+	//                       START                      //
+	//                                                  //
+	//////////////////////////////////////////////////////
+
+
+  $vocabularies = \Drupal\taxonomy\Entity\Vocabulary::loadMultiple();
+
+  // On créé des variables de config
+  // (cf. competencies_file.config.yml)
+  $config = \Drupal::config('competencies_file.config')->get('hook_install');
+
+  // Nom du vocabulaire
+  $vocabularyMachineName = $config['vocabulary'];
+  // On vérifie que le vocabulaire en question existe bien
+  if (isset($vocabularies[$vocabularyMachineName])) {
+
+  	// Tableau listant les termes à créer
+	  $termsLanguageList = $config['terms_language'];
+
+	  // Récupère les termes du vocabulaire en question(s'ils existent)
+    $properties['vid'] = $vocabularyMachineName;
+    $terms = \Drupal::entityManager()->getStorage('taxonomy_term')->loadByProperties($properties);
+
+    // Avant de créer les termes à la volée,
+    // on vérifie qu'il n'existe pas avant.
+	  foreach ((array)$terms as $term) {
+	    // S'il trouve des correspondances :
+	    if ( ($key = array_search($term->getName(), $termsLanguageList)) !== false) {
+    		// alors on retire ces termes du tableau
+        unset($termsLanguageList[$key]);
+	    }
+	  }
+
+	  // Poids des termes
+	  $weight = 0;
+
+	  // On crée les termes si nécessaire
+	  foreach ((array)$termsLanguageList as $term_name) {
+	    $term = \Drupal\taxonomy\Entity\Term::create([
+	      'vid' => $vocabularyMachineName,
+	      'name' => $term_name,
+	      'weight' => $weight
+	    ]);
+	    $term->save();
+	    $weight++;
+		}
+
+  }
+
+
+  //////////////////////////////////////////////////////
+  //                                                  //
+  //                Générer les termes                //
+  //        du vocabulaire de taxonomie Langue        //
+  //                        END                       //
+  //                                                  //
+  //////////////////////////////////////////////////////
+
+
+}

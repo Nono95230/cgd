@@ -1,0 +1,228 @@
+/* line 15, ../scss/screen.scss */
+article.competencies-file .field--node--competencies_file--field--ptype .field--label--ptype {
+  padding: 12px;
+  /* background-color: #f0f0f0;
+  border: 1px solid #e0e0e0; */
+  border-radius: 3px;
+  border: 1px solid #ccc !important;
+  background-color: #eee !important;
+  -webkit-print-color-adjust: exact;
+  margin: 15px 0;
+}
+/* line 24, ../scss/screen.scss */
+article.competencies-file .field--node--competencies_file--field--ptype .field--label--ptype h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+/* line 31, ../scss/screen.scss */
+article.competencies-file .field--node--competencies_file--field--ptype > .field--items > .field--item {
+  padding: 10px 30px;
+}
+
+/* line 38, ../scss/screen.scss */
+#print_identity,
+.field--name-field-competencies-file-jobtitle,
+.field--name-field-competencies-file-xp-year {
+  font-size: 2rem;
+}
+
+/* line 44, ../scss/screen.scss */
+#print_identity {
+  text-transform: uppercase;
+}
+
+/* line 48, ../scss/screen.scss */
+.field--name-field-competencies-file-jobtitle:before {
+  content: 'Titre : ';
+}
+
+/* line 52, ../scss/screen.scss */
+#print_new_element {
+  display: none;
+}
+/* line 54, ../scss/screen.scss */
+#print_new_element p {
+  margin: 0;
+}
+
+/* line 59, ../scss/screen.scss */
+#print_bg {
+  display: none;
+  background: url("../img/bg_first_page.jpg") no-repeat top right !important;
+  -webkit-print-color-adjust: exact;
+  background-size: 36% 100% !important;
+  height: 28.6cm !important;
+}
+
+/* line 88, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item {
+  padding: 5px 30px;
+}
+/* line 90, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique {
+  display: flex;
+}
+@media (max-width: 764px) {
+  /* line 90, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique {
+    flex-direction: column;
+  }
+}
+/* line 95, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique .field--name-field-skill-section {
+  flex: 1;
+  font-weight: bold;
+}
+@media (min-width: 764px) and (max-width: 991px) {
+  /* line 95, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique .field--name-field-skill-section {
+    flex: 1.4;
+  }
+}
+/* line 101, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique .field--name-field-skill-section:after {
+  content: " :";
+}
+/* line 105, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-skill > .field--items > .field--item .paragraph--type--ptype-competence-technique .field--name-field-skill-competences {
+  flex: 3;
+  line-height: 20px;
+}
+
+/* line 135, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item {
+  padding: 10px 6px;
+}
+/* line 138, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items {
+  padding: 6px 15px;
+  /* background-color: #f0f0f0;
+  border: 1px solid #e0e0e0; */
+  border-radius: 3px;
+  border: 1px solid #d8d8d8 !important;
+  background-color: #f8f8f8 !important;
+  -webkit-print-color-adjust: exact;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+/* line 149, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items * {
+  font-weight: bold;
+}
+@media (max-width: 599px) {
+  /* line 138, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items {
+    flex-direction: column;
+  }
+}
+/* line 155, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .ptype-xp-pro-header-item {
+  flex: 1;
+  text-align: center;
+}
+/* line 158, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .ptype-xp-pro-header-item.xp-pro-header-date .field {
+  display: inline-block;
+}
+@media (min-width: 600px) {
+  /* line 163, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .ptype-xp-pro-header-item.xp-pro-header-enterprise {
+    order: 2;
+  }
+  /* line 166, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .ptype-xp-pro-header-item.xp-pro-header-date {
+    order: 1;
+    text-align: left;
+  }
+  /* line 170, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-header-items .ptype-xp-pro-header-item.xp-pro-header-job_name {
+    order: 3;
+    text-align: right;
+  }
+}
+/* line 177, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-content-item {
+  padding: 20px 20px 0;
+}
+/* line 180, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-content-item .field--name-field-xp-pro-environment-tech .field--label {
+  border-bottom: 1px solid black;
+}
+/* line 182, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-xp-pro > .field--items > .field--item .paragraph--type--ptype-experience-pro .ptype-xp-pro-content-item .field--name-field-xp-pro-environment-tech .field--label:after {
+  content: " :";
+}
+
+/* line 218, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items {
+  display: flex;
+}
+@media (max-width: 764px) {
+  /* line 218, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items {
+    flex-direction: column;
+  }
+}
+/* line 224, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-date {
+  font-weight: bold;
+  flex: 0.75;
+}
+@media (max-width: 991px) {
+  /* line 224, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-date {
+    flex: 1;
+  }
+}
+/* line 230, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-date .field {
+  display: inline-block;
+}
+/* line 233, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-date:after {
+  content: " :";
+}
+/* line 237, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-description {
+  flex: 3;
+}
+/* line 239, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-description .field {
+  display: inline-block;
+}
+/* line 241, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-course > .field--items > .field--item .paragraph--type--ptype-formation-diplome .ptype-course-items .ptype-course-item.course-description .field p {
+  margin-bottom: 0;
+}
+
+/* line 278, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue {
+  display: flex;
+}
+@media (max-width: 764px) {
+  /* line 278, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue {
+    flex-direction: column;
+  }
+}
+/* line 283, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue .field--name-field-language-name {
+  font-weight: bold;
+  flex: 0.75;
+}
+@media (max-width: 991px) {
+  /* line 283, ../scss/screen.scss */
+  article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue .field--name-field-language-name {
+    flex: 1;
+  }
+}
+/* line 289, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue .field--name-field-language-name:after {
+  content: " :";
+}
+/* line 293, ../scss/screen.scss */
+article.competencies-file .field--name-field-competencies-file-language > .field--items > .field--item .paragraph--type--ptype-langue .field--name-field-language-level {
+  flex: 3;
+}

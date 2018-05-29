@@ -1,0 +1,23 @@
+uuid: e1dd92d3-bbfe-4e42-87db-03d31e420055
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_course_current_formation
+    - paragraphs.paragraphs_type.ptype_formation_diplome
+id: paragraph.ptype_formation_diplome.field_course_current_formation
+field_name: field_course_current_formation
+entity_type: paragraph
+bundle: ptype_formation_diplome
+label: 'Formation actuelle'
+description: "Cochez cette case si cette formation est toujours d'actualité.\r\nSi vous cochez cette case, alors vous n'avez pas de date de fin à renseigner"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

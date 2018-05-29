@@ -1,0 +1,23 @@
+uuid: e8992bc2-95de-4730-a5b8-2c361f0a9500
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_course_date_start
+    - paragraphs.paragraphs_type.ptype_formation_diplome
+  module:
+    - datetime
+_core:
+  default_config_hash: 3Dsw9TMsgXw9PS6z7LsI8w-A6MMQiomfU-1hPCGUNFc
+id: paragraph.ptype_formation_diplome.field_course_date_start
+field_name: field_course_date_start
+entity_type: paragraph
+bundle: ptype_formation_diplome
+label: 'Date de début'
+description: 'Indiquer ici le mois et l''année de début de votre formation'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

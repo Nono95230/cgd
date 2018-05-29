@@ -1,0 +1,308 @@
+
+
+
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//                Partie Générale               //
+//                     START                    //
+//                                              //
+//////////////////////////////////////////////////
+
+article.competencies-file{
+  .field--node--competencies_file--field--ptype{
+    .field--label--ptype{
+      padding: 12px;
+      /* background-color: #f0f0f0;
+      border: 1px solid #e0e0e0; */
+      border-radius:3px;
+      border: 1px solid #ccc!important;
+      background-color: #eee!important;
+      -webkit-print-color-adjust: exact;
+      margin:15px 0;
+      h2{
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+    &> .field--items{
+      &> .field--item{
+        padding:10px 30px;
+      }
+    }
+  }
+}
+
+#print_identity,
+.field--name-field-competencies-file-jobtitle,
+.field--name-field-competencies-file-xp-year{
+  font-size:2rem;
+}
+
+#print_identity{
+  text-transform: uppercase;
+}
+
+.field--name-field-competencies-file-jobtitle:before{
+  content:'Titre : ';
+}
+
+#print_new_element{
+  display: none;
+  p{
+    margin: 0;
+  }
+}
+
+#print_bg{
+  display: none;
+  background:url('../images/bg_first_page.jpg') no-repeat top right !important;
+  -webkit-print-color-adjust: exact;
+  background-size: 36% 100%!important;
+  height:28.6cm !important;
+}
+
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//                Partie Générale               //
+//                      END                     //
+//                                              //
+//////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//         Partie Compétences Technique         //
+//                     START                    //
+//                                              //
+//////////////////////////////////////////////////
+
+article.competencies-file{
+  .field--name-field-competencies-file-skill{
+    &> .field--items{
+      &> .field--item{
+        padding:5px 30px;
+        .paragraph--type--ptype-competence-technique{
+          display: flex;
+          @media (max-width: 764px){
+            flex-direction:column;
+          }
+          .field--name-field-skill-section{
+            flex:1;
+            @media (min-width: 764px) and (max-width: 991px){
+              flex:1.4;
+            }
+            font-weight: bold;
+            &:after{
+              content:' :'
+            }
+          }
+          .field--name-field-skill-competences{
+            flex:3;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//         Partie Compétences Technique         //
+//                      END                     //
+//                                              //
+//////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//      Partie Expérience Professionnelles      //
+//                     START                    //
+//                                              //
+//////////////////////////////////////////////////
+
+article.competencies-file{
+  .field--name-field-competencies-file-xp-pro{
+    &> .field--items{
+      &> .field--item{
+        padding:10px 6px;
+        .paragraph--type--ptype-experience-pro{
+          .ptype-xp-pro-header-items{
+            padding:6px 15px;
+            /* background-color: #f0f0f0;
+            border: 1px solid #e0e0e0; */
+            border-radius:3px;
+            border: 1px solid #d8d8d8!important;
+            background-color: #f8f8f8!important;
+            -webkit-print-color-adjust: exact;
+            display: flex;
+            align-items: center;
+            font-size:1.6rem;
+            *{
+              font-weight:bold;
+            }
+            @media (max-width: 599px){
+              flex-direction:column;
+            }
+            .ptype-xp-pro-header-item{
+              flex: 1;
+              text-align: center;
+              &.xp-pro-header-date .field{
+                display: inline-block;
+              }
+              @media (min-width: 600px){
+
+                &.xp-pro-header-enterprise{
+                  order:2;
+                }
+                &.xp-pro-header-date{
+                  order:1;
+                  text-align: left;
+                }
+                &.xp-pro-header-job_name{
+                  order:3;
+                  text-align: right;
+                }
+              }
+            }
+          }
+          .ptype-xp-pro-content-item{
+            padding:20px 20px 0;
+            .field--name-field-xp-pro-environment-tech{
+              .field--label{
+                border-bottom: 1px solid black;
+                &:after{
+                  content:' :'
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//      Partie Expérience Professionnelles      //
+//                      END                     //
+//                                              //
+//////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//         Partie Formations & Diplômes         //
+//                     START                    //
+//                                              //
+//////////////////////////////////////////////////
+
+article.competencies-file{
+  .field--name-field-competencies-file-course{
+    &> .field--items{
+      &> .field--item{
+        .paragraph--type--ptype-formation-diplome{
+          .ptype-course-items{
+            display: flex;
+            @media (max-width: 764px){
+              flex-direction:column;
+            }
+            .ptype-course-item{
+              &.course-date{
+                font-weight:bold;
+                flex:0.75;
+                @media (max-width: 991px){
+                  flex:1;
+                }
+                .field{
+                  display: inline-block;
+                }
+                &:after{
+                  content:' :'
+                }
+              }
+              &.course-description{
+                flex:3;
+                .field{
+                  display: inline-block;
+                  p{
+                    margin-bottom:0;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//         Partie Formations & Diplômes         //
+//                      END                     //
+//                                              //
+//////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//                Partie Langues                //
+//                     START                    //
+//                                              //
+//////////////////////////////////////////////////
+
+
+
+article.competencies-file{
+  .field--name-field-competencies-file-language{
+    &> .field--items{
+      &> .field--item{
+        .paragraph--type--ptype-langue{
+          display: flex;
+          @media (max-width: 764px){
+            flex-direction:column;
+          }
+          .field--name-field-language-name{
+            font-weight:bold;
+            flex:0.75;
+            @media (max-width: 991px){
+              flex:1;
+            }
+            &:after{
+              content:' :'
+            }
+          }
+          .field--name-field-language-level{
+            flex:3;
+          }
+        }
+
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////
+//                                              //
+//            Dossier de compétences            //
+//                Partie Langues                //
+//                      END                     //
+//                                              //
+//////////////////////////////////////////////////

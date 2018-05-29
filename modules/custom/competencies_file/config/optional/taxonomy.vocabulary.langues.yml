@@ -1,0 +1,11 @@
+uuid: 8e5b347d-2717-4da4-b5d0-6643831ea44d
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QlKrw_ZfVvIQYm4YYHLY-z_BBwraGxfCxjA2uB6nq7Q
+name: Langues
+vid: langues
+description: 'Utilisez les langues pour indiquer celle(s) que vous pratiquer dans votre Dossier de Compétences'
+hierarchy: 0
+weight: 0

@@ -1,0 +1,33 @@
+uuid: 36db5206-fd43-4108-b8e3-6cb19edd5494
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.view_block_competencies_file
+  module:
+    - route_condition
+    - views
+  theme:
+    - bootstrap_child
+_core:
+  default_config_hash: vvMbsMJ1RcEyfp1PI3P_kvqOz351qGUbuv4D3h3C9XM
+id: views_block__view_block_competencies_file_block_1
+theme: bootstrap_child
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:view_block_competencies_file-block_1'
+settings:
+  id: 'views_block:view_block_competencies_file-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  route:
+    id: route
+    routes: entity.user.canonical
+    negate: false
+    context_mapping: {  }

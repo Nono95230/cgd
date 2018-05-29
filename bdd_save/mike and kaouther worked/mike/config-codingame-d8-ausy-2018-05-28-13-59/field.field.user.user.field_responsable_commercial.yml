@@ -1,0 +1,31 @@
+uuid: 219579f0-1fc6-423b-a524-ef5dfbfc2cb3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_responsable_commercial
+  module:
+    - user
+_core:
+  default_config_hash: c3hlrCg4miLRWYBOSQ0HQKjRjoxoxqljCy7nywKJSck
+id: user.user.field_responsable_commercial
+field_name: field_responsable_commercial
+entity_type: user
+bundle: user
+label: 'Responsable commercial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

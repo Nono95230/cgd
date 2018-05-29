@@ -1,0 +1,31 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+//use Drupal\editor\Entity\Editor;
+//use Drupal\Core\Form\FormStateInterface;
+//use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_help().
+ */
+function test_d8_help($route_name, RouteMatchInterface $route_match){
+  switch ($route_name) {
+    case 'help.page.test_d8':
+      $output = '';
+      $output .= '<h3>'.t('About').'</h3>';
+      $output .= '<p>'.t('Please send help').'</p>';
+
+      return $output;
+  }
+}
+
+/**
+ * Implements template_preprocess_html().
+ */
+// send settings to JS
+function test_d8_preprocess_html(&$variables){
+  $settings = \Drupal::config('test_d8.settings');
+  $variables['#attached']['drupalSettings']['TestD8']['time_to_complete_test'] = $settings->get('time_to_complete_test');
+  $variables['#attached']['drupalSettings']['TestD8']['number_of_questions'] = $settings->get('number_of_questions');
+}
+

@@ -1,0 +1,31 @@
+uuid: 68d38370-9f85-485a-b54d-1304f1567a49
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_language_name
+    - paragraphs.paragraphs_type.ptype_langue
+    - taxonomy.vocabulary.langues
+_core:
+  default_config_hash: urjzxzA7VVn66uePOn2sFMQtPJxH18OONAvnMLXMuag
+id: paragraph.ptype_langue.field_language_name
+field_name: field_language_name
+entity_type: paragraph
+bundle: ptype_langue
+label: Langue
+description: 'Indiquer le nom de la langue que vous pratiquez'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      langues: langues
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: c379e2fd-313c-4019-8243-179708f29d1e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.competencies_file
+_core:
+  default_config_hash: f0F5pD8Y1GZGnFRrg4D7YLWdl5aGR4GJCGve7gBmS08
+id: node.competencies_file.promote
+field_name: promote
+entity_type: node
+bundle: competencies_file
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

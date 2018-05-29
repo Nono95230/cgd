@@ -1,0 +1,10 @@
+uuid: de90c007-8dbb-4eb0-9381-4eb1fef640d5
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SwX-L5ubXh2h4wGtSFlhZ8hKLspdl3ZlQS51iE2f9ic
+id: format_date_content_type
+label: 'Format Date Content Type'
+locked: false
+pattern: 'Y-m-d\TH:i:s'

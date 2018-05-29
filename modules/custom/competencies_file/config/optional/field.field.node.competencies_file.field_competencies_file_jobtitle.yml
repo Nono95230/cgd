@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencies_file_jobtitle
+    - node.type.competencies_file
+id: node.competencies_file.field_competencies_file_jobtitle
+field_name: field_competencies_file_jobtitle
+entity_type: node
+bundle: competencies_file
+label: 'Titre du poste actuel'
+description: 'Indiquer le titre de votre poste actuel chez Ausy'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

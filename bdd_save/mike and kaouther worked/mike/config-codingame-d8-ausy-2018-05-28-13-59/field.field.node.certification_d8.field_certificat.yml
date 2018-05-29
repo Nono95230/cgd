@@ -1,0 +1,29 @@
+uuid: 43609c3c-5176-43a1-a887-5aeaea2ee1b9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certificat
+    - node.type.certification_d8
+  module:
+    - file
+_core:
+  default_config_hash: tjJS9GaYd51WWE7AEJaFc8fb2bSlPUqb7SgVvGWqicQ
+id: node.certification_d8.field_certificat
+field_name: field_certificat
+entity_type: node
+bundle: certification_d8
+label: Certificat
+description: 'Le certificat justificatif du passage...'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'certificates/[date:custom:Y]-[date:custom:m]-[date:custom:d]'
+  file_extensions: pdf
+  max_filesize: 1MB
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

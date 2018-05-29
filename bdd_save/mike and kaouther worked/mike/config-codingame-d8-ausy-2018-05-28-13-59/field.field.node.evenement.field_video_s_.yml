@@ -1,0 +1,27 @@
+uuid: 6c9d4eb1-e69e-4b1b-b0c8-556e6ceaed55
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_s_
+    - node.type.evenement
+  module:
+    - video_embed_field
+_core:
+  default_config_hash: 8k-84ow5aEgZ92OUIvRinxZDQi7S2EqR08fyAN_tOnA
+id: node.evenement.field_video_s_
+field_name: field_video_s_
+entity_type: node
+bundle: evenement
+label: Vidéo(s)
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    youtube_playlist: youtube_playlist
+    youtube: youtube
+    vimeo: vimeo
+field_type: video_embed_field

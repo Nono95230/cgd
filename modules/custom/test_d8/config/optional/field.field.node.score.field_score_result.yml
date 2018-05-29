@@ -1,0 +1,25 @@
+uuid: ad0c81e9-49eb-4c7c-b57b-7730c0f0a366
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_score_result
+    - node.type.score
+id: node.score.field_score_result
+field_name: field_score_result
+entity_type: node
+bundle: score
+label: Résultat
+description: 'Indique le pourcentage de réussite de l''utilisateur qui a passé le Test Drupal 8'
+required: true
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 100
+  prefix: ''
+  suffix: '&nbsp;%'
+field_type: decimal

@@ -1,0 +1,23 @@
+uuid: d612df99-5d9f-4b20-83d7-cf574d66eb4d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+_core:
+  default_config_hash: 5FOKa313Y9rnSB_VFnBrczH7Y4Xbhi4LmytPFsfsWhI
+id: node.field_competencies_file_language
+field_name: field_competencies_file_language
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

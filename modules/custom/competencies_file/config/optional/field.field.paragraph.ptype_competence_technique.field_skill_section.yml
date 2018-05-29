@@ -1,0 +1,21 @@
+uuid: b2fe92e3-2972-4fa0-98e5-cccfe899cddf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skill_section
+    - paragraphs.paragraphs_type.ptype_competence_technique
+_core:
+  default_config_hash: fyqDqloWhqBxyjC6Z6QcDiZilwihnQMRo5-WhxfMH-I
+id: paragraph.ptype_competence_technique.field_skill_section
+field_name: field_skill_section
+entity_type: paragraph
+bundle: ptype_competence_technique
+label: Rubrique
+description: 'Indiquer un nom de rubrique qui référencera les compétences techniques en relation'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

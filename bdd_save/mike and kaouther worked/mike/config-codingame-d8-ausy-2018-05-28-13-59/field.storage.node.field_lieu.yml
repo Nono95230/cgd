@@ -1,0 +1,21 @@
+uuid: ada8da2f-df70-4db9-a706-a3b25f4f5c42
+langcode: fr
+status: true
+dependencies:
+  module:
+    - address
+    - node
+_core:
+  default_config_hash: DI0aFQKjCIcDq5_asG4OLSJsaBKSlrIcHlvNM0hIzm8
+id: node.field_lieu
+field_name: field_lieu
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

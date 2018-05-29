@@ -1,0 +1,23 @@
+uuid: 319be067-2337-4a1d-bf9d-18dc539d9bb8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adresse
+    - node.type.evenement
+  module:
+    - geolocation
+_core:
+  default_config_hash: uIXd0n4QsPpK86E0apujuYPobvc5qPZuur62am4hOj4
+id: node.evenement.field_adresse
+field_name: field_adresse
+entity_type: node
+bundle: evenement
+label: Adresse
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

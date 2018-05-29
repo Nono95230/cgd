@@ -1,0 +1,11 @@
+number_of_questions: 40
+time_to_complete_test: 3600
+num_tests_per_page: 20
+percent:
+  average: 50
+  graduation: 70
+namespace:
+  qcm_form: Drupal\test_d8\Form\TestDrupal8QcmForm
+_core:
+  default_config_hash: r7L8ylo5zGcrAR1IIVwwZFI59vz9fxwoe_ITlJjaI8c
+langcode: fr

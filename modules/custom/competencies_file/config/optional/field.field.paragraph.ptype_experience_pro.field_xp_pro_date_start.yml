@@ -1,0 +1,23 @@
+uuid: 188be1df-6f9d-43a4-ac52-4e8870eac433
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_xp_pro_date_start
+    - paragraphs.paragraphs_type.ptype_experience_pro
+  module:
+    - datetime
+_core:
+  default_config_hash: 8LrGjuJmLB4zG3-wj64Aowj3t6O6R3YmWmsQ6VOv_3w
+id: paragraph.ptype_experience_pro.field_xp_pro_date_start
+field_name: field_xp_pro_date_start
+entity_type: paragraph
+bundle: ptype_experience_pro
+label: 'Date de début'
+description: 'Indiquez la date de début de la mission.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

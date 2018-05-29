@@ -1,0 +1,26 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_video_upload_or_embed
+field_name: field_video_upload_or_embed
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: upload
+      label: 'Charger une vidéo'
+    -
+      value: embed
+      label: 'Vidéo depuis une plateforme (YouTube, DailyMotion, Viméo)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

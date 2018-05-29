@@ -1,0 +1,31 @@
+uuid: 0dae39c7-8815-4346-87e3-15038ba34cb9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.certification_d8
+    - taxonomy.vocabulary.d8_themes
+_core:
+  default_config_hash: 6ea-o_2jdq0xfnjBVGf2E2yEyS_6nh-stkTNNtL3cKc
+id: node.certification_d8.field_theme
+field_name: field_theme
+entity_type: node
+bundle: certification_d8
+label: Thème
+description: 'Liste des 4 thèmes de certification ...'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      d8_themes: d8_themes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

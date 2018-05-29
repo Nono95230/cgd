@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_upload_or_embed
+    - node.type.news_d8
+  module:
+    - options
+id: node.news_d8.field_video_upload_or_embed
+field_name: field_video_upload_or_embed
+entity_type: node
+bundle: news_d8
+label: 'Type de vidéo'
+description: 'Précisez le type de vidéo que vous souhaitez partager'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

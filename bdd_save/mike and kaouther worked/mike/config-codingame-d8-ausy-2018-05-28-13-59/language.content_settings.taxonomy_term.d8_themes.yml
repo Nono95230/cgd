@@ -1,0 +1,13 @@
+uuid: 140c5d7d-3b30-47f0-b513-76b115a7b4d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.d8_themes
+_core:
+  default_config_hash: F3KeGJbUch87SvvxSbvHfgKwDHdqSG_bbzqbRUWRt3E
+id: taxonomy_term.d8_themes
+target_entity_type_id: taxonomy_term
+target_bundle: d8_themes
+default_langcode: site_default
+language_alterable: false

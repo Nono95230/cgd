@@ -1,0 +1,24 @@
+uuid: b29e4a78-2c25-44b4-a281-214d84de6a48
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.d8_themes.field_theme_class
+    - taxonomy.vocabulary.d8_themes
+  module:
+    - text
+id: taxonomy_term.d8_themes.default
+targetEntityType: taxonomy_term
+bundle: d8_themes
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_theme_class: true
+  langcode: true

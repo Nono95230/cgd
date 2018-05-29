@@ -1,0 +1,168 @@
+// On cache les éléments indésirables
+#navbar,
+#toolbar-administration,
+.tabs,
+.region-header,
+.page-header,
+.contextual,
+footer,
+.highlighted,
+#user-profile-print-btn,
+// Ces 2 champs sont cachés car ils sont doublés dans le template,
+// et on souhaite afficher que ceux placés en tête du template
+article .field--name-field-competencies-file-jobtitle,
+article .field--name-field-competencies-file-xp-year{
+  display: none!important;
+}
+
+@page :first {
+  margin: 0.5cm;
+}
+
+@page { 
+  margin: 1.5cm 0.8cm;
+}
+
+#print_bg{
+  display: block!important;
+  #print_logo{
+    margin:1.5cm 1cm;
+  }
+}
+
+#print_new_element{
+  display: block!important;
+  position: absolute;
+  left:0;
+  top:6.75cm;
+  #print_dc{
+    width:400px;
+    font-size: 5rem;
+    margin-left:1.5cm;
+  }
+  #print_consultant_primary_info{
+    margin-top:10cm;
+    margin-left:0.5cm;
+    #print_identity,
+    .field--name-field-competencies-file-jobtitle,
+    .field--name-field-competencies-file-xp-year{
+      margin-bottom:10px;
+    }
+    .field--name-field-competencies-file-xp-year{
+      page-break-after: always;
+    }
+  }
+}
+
+
+
+.paragraph--type--ptype-competence-technique,
+.paragraph--type--ptype-experience-pro,
+.paragraph--type--ptype-formation-diplome,
+.paragraph--type--ptype-langue,
+.field--name-field-competencies-file-skill,
+.field--name-field-competencies-file-course,
+.field--name-field-competencies-file-language{
+  page-break-inside :avoid;
+}
+
+// .paragraph--type--ptype-competence-technique,
+// .paragraph--type--ptype-langue,
+// .field--name-field-competencies-file-skill,
+// .field--name-field-competencies-file-course,
+// .field--name-field-competencies-file-language{
+//   page-break-inside :avoid;
+// }
+
+// .paragraph--type--ptype-experience-pro,
+// .paragraph--type--ptype-formation-diplome{
+//   p, li{
+//     page-break-inside :avoid;
+//   }
+//   &:first-child{
+//     page-break-inside :inherit;
+//   }
+// }
+
+article.competencies-file{
+  .field--name-field-competencies-file-skill{
+    &> .field--items{
+      &> .field--item{
+        .paragraph--type--ptype-competence-technique{
+            flex-direction:row!important;
+          .field--name-field-skill-section{
+            flex:1.4!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+article.competencies-file{
+  .field--name-field-competencies-file-xp-pro{
+    &> .field--items{
+      &> .field--item{
+        .paragraph--type--ptype-experience-pro{
+
+          .ptype-xp-pro-header-items{
+            flex-direction:row!important;
+
+            .xp-pro-header-enterprise{
+              order:2;
+            }
+            .xp-pro-header-date{
+              order:1;
+              text-align: left!important;
+            }
+            .xp-pro-header-job_name{
+              order:3;
+              text-align: right!important;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+}
+
+
+
+article.competencies-file{
+  .field--name-field-competencies-file-course{
+    &> .field--items{
+      &> .field--item{
+        .paragraph--type--ptype-formation-diplome{
+          .ptype-course-items{
+            flex-direction:row!important;
+            .ptype-course-item{
+              &.course-date{
+                flex:1!important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+article.competencies-file{
+  .field--name-field-competencies-file-language{
+    &> .field--items{
+      &> .field--item{
+        .paragraph--type--ptype-langue{
+          flex-direction:row!important;
+          .field--name-field-language-name{
+            flex:1!important;
+          }
+        }
+
+      }
+    }
+  }
+}

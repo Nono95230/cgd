@@ -1,0 +1,20 @@
+uuid: 0af49959-15c2-4eb3-aa70-70e723d9dda7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: OFP0ztn4jXA-HpJPUyHvKy1YWDHpkF3imU50oOGWp5c
+id: paragraph.field_xp_pro_current_job
+field_name: field_xp_pro_current_job
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 1acb8988-3929-4111-bdfe-742a40af68e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audio
+    - node.type.news_d8
+  module:
+    - file
+_core:
+  default_config_hash: KLOIu0T6rEjkYqmb0EqRiHQKOB2DOMSRcWw9NOtv7Is
+id: node.news_d8.field_audio
+field_name: field_audio
+entity_type: node
+bundle: news_d8
+label: Audio
+description: 'Chargez dans ce champs le fichier audio que vous souhaitez partager'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'news/audio/[date:custom:Y]-[date:custom:m]/[date:custom:d]'
+  file_extensions: 'mp3 mp4 aac flac wav'
+  max_filesize: '8 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

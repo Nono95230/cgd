@@ -1,0 +1,39 @@
+uuid: ad6ebe24-7a19-4bb0-ab4f-e22c7295fae7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.evenement.field_adresse
+    - field.field.node.evenement.field_comments
+    - field.field.node.evenement.field_dans_la_meme_rubrique
+    - field.field.node.evenement.field_date
+    - field.field.node.evenement.field_description
+    - field.field.node.evenement.field_lieu
+    - field.field.node.evenement.field_organisateurs
+    - field.field.node.evenement.field_photo_s_
+    - field.field.node.evenement.field_video_s_
+    - node.type.evenement
+  module:
+    - user
+_core:
+  default_config_hash: AWhKQc6xECJtcPJ8bZ470jEg2bMBIa7gm4G4s40iFwg
+id: node.evenement.teaser
+targetEntityType: node
+bundle: evenement
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_adresse: true
+  field_comments: true
+  field_dans_la_meme_rubrique: true
+  field_date: true
+  field_description: true
+  field_lieu: true
+  field_organisateurs: true
+  field_photo_s_: true
+  field_video_s_: true
+  langcode: true

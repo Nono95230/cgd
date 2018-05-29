@@ -1,0 +1,21 @@
+uuid: 57ec9939-eb82-4575-a35f-1fbc1e255c0c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - geolocation
+    - node
+_core:
+  default_config_hash: N0YEJvwDEpgXAk5fzUF7GkWx7RaMy_SujfDzkURxr8k
+id: node.field_adresse
+field_name: field_adresse
+entity_type: node
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

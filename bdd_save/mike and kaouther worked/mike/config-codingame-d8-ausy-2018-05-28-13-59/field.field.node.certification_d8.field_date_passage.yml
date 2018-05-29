@@ -1,0 +1,26 @@
+uuid: 3a6ff399-151a-43d4-a8c3-35e01bffcfcd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_passage
+    - node.type.certification_d8
+  module:
+    - datetime
+_core:
+  default_config_hash: 3tS6k4BmnQ2Vq3Ssc8YVnYXd0fbsL3C53DG1mTeazrM
+id: node.certification_d8.field_date_passage
+field_name: field_date_passage
+entity_type: node
+bundle: certification_d8
+label: 'Date de passage'
+description: 'Date de passage de la certification ...'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

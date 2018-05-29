@@ -1,0 +1,19 @@
+uuid: 4fcefb98-7a36-42ab-aa17-779304615548
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: CCCgmQNT1SilbD_IAbIfxoBwdO7l4MzszYsf9KkUvgQ
+name: Actualité
+type: news_d8
+description: 'Dans ce type de contenu, on va créer le type de contenu Actualité.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

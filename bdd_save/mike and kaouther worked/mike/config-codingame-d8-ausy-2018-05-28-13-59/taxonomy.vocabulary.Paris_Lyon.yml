@@ -1,0 +1,9 @@
+uuid: 700ae369-b5c8-4a24-ac26-62b75349f507
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Paris et Lyon'
+vid: Paris_Lyon
+description: ''
+hierarchy: 0
+weight: 0

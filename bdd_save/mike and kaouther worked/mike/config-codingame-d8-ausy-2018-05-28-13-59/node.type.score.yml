@@ -1,0 +1,19 @@
+uuid: bba2c7ef-fc7c-45b9-b953-0d39c4f6ef83
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: vfACjIfiZY86u7yhEf_h4q1ACbHFxeewqs2WYMbriCs
+name: Score
+type: score
+description: 'Utilisez le Score pour enregistrer le résultat d''un utilisateur Drupalien à son Test Drupal 8'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

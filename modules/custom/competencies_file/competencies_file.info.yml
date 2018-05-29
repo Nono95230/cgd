@@ -1,0 +1,11 @@
+name: Competencies File
+description: 'Ce module contient toutes les configurations nécessaire au bon fonctionnement de la partie Dossier de Compétences'
+package: Custom
+dependencies:
+  - paragraphs (>=8.x-1.2)
+  - route_condition (>=8.x-1.0-alpha2)
+type: module
+version: VERSION
+core: '8.x'
+
+

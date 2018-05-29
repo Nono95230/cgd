@@ -1,0 +1,58 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_d8.field_audio
+    - field.field.node.news_d8.field_body
+    - field.field.node.news_d8.field_comments
+    - field.field.node.news_d8.field_links_documents
+    - field.field.node.news_d8.field_picture
+    - field.field.node.news_d8.field_tags
+    - field.field.node.news_d8.field_video_upload_or_embed
+    - node.type.news_d8
+  module:
+    - image
+    - text
+    - user
+id: node.news_d8.teaser
+targetEntityType: node
+bundle: news_d8
+mode: teaser
+content:
+  field_body:
+    type: text_trimmed
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 120
+    third_party_settings: {  }
+  field_picture:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_audio: true
+  field_comments: true
+  field_links_documents: true
+  field_video_upload_or_embed: true
+  langcode: true

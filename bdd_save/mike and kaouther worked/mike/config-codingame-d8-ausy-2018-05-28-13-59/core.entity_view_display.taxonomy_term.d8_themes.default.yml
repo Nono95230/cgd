@@ -1,0 +1,31 @@
+uuid: 73e17ce5-f2aa-4213-9e45-602512a43808
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.d8_themes.field_certification_class_btstrp
+    - taxonomy.vocabulary.d8_themes
+  module:
+    - text
+id: taxonomy_term.d8_themes.default
+targetEntityType: taxonomy_term
+bundle: d8_themes
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_certification_class_btstrp:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

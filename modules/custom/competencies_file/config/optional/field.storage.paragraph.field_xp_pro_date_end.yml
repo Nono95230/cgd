@@ -1,0 +1,22 @@
+uuid: 4e6d2dcd-cf4d-42e7-910a-5e9c0aedffba
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+_core:
+  default_config_hash: jMSOrc02C68kTy3PmSlFuJSjPZoXFZKw8NUfsBZTyEw
+id: paragraph.field_xp_pro_date_end
+field_name: field_xp_pro_date_end
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

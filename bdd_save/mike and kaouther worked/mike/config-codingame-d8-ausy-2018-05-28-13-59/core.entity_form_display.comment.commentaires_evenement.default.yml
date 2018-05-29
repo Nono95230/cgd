@@ -1,0 +1,28 @@
+uuid: ae6ea481-deaa-4148-98d4-26615b23451f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - comment.type.commentaires_evenement
+_core:
+  default_config_hash: 0PycK_-APPjfLXwYYkvTkF5ZFg549Oa0F_fW53pg19k
+id: comment.commentaires_evenement.default
+targetEntityType: comment
+bundle: commentaires_evenement
+mode: default
+content:
+  author:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true

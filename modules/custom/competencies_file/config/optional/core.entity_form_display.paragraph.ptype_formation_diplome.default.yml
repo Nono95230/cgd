@@ -1,0 +1,51 @@
+uuid: 6579f094-2ea4-4e5f-8ba6-d9ca1808bcd9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ptype_formation_diplome.field_course_current_formation
+    - field.field.paragraph.ptype_formation_diplome.field_course_date_end
+    - field.field.paragraph.ptype_formation_diplome.field_course_date_start
+    - field.field.paragraph.ptype_formation_diplome.field_course_description
+    - paragraphs.paragraphs_type.ptype_formation_diplome
+  module:
+    - datetime
+    - text
+_core:
+  default_config_hash: rJPkBgFiMPVDH-9jyO-pVKmjcVpbYRbMJI2FYUFKM4s
+id: paragraph.ptype_formation_diplome.default
+targetEntityType: paragraph
+bundle: ptype_formation_diplome
+mode: default
+content:
+  field_course_current_formation:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_course_date_end:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_course_date_start:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_course_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

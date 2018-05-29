@@ -1,0 +1,22 @@
+uuid: bf60cfa4-4d9d-4ba4-bef6-2a1077eae9cd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: J9HGE_dnePW4eCM17S_zTALtZozIPxyum7ogo4y9oRU
+id: node.field_competencies_file_xp_year
+field_name: field_competencies_file_xp_year
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

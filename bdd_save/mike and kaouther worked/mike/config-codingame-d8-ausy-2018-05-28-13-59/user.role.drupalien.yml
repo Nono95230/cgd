@@ -1,0 +1,14 @@
+uuid: e7206568-ce61-4879-b22c-3d396982a743
+langcode: fr
+status: true
+dependencies: {  }
+id: drupalien
+label: Drupalien
+weight: -7
+is_admin: null
+permissions:
+  - 'change own username'
+  - 'create certification_d8 content'
+  - 'delete own certification_d8 content'
+  - 'edit own certification_d8 content'
+  - 'view certification_d8 revisions'

@@ -1,0 +1,19 @@
+uuid: 82de4af2-5c24-4da7-b3d1-3a3fc8cd88dc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_theme_class
+    - taxonomy.vocabulary.d8_themes
+id: taxonomy_term.d8_themes.field_theme_class
+field_name: field_theme_class
+entity_type: taxonomy_term
+bundle: d8_themes
+label: Class
+description: "Indiquez le machine name du terme. \r\nCelui nous servira pour l'intégration graphique !"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

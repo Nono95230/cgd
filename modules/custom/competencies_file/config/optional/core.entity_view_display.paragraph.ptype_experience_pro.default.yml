@@ -1,0 +1,83 @@
+uuid: 0ae24d26-09c4-4a99-a5dc-403fea24ddf4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ptype_experience_pro.field_job_description
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_current_job
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_date_end
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_date_start
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_enterprise
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_environment_tech
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_job_name
+    - paragraphs.paragraphs_type.ptype_experience_pro
+  module:
+    - datetime
+    - text
+_core:
+  default_config_hash: AaCyIl2oSgW8OVL36uhxUGGYy4O3u8qfPiNU9bowcnY
+id: paragraph.ptype_experience_pro.default
+targetEntityType: paragraph
+bundle: ptype_experience_pro
+mode: default
+content:
+  field_job_description:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_xp_pro_current_job:
+    type: boolean
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      format: default
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+  field_xp_pro_date_end:
+    weight: 2
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: date_experience_professionnelle
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_xp_pro_date_start:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: date_experience_professionnelle
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_xp_pro_enterprise:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_xp_pro_environment_tech:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_xp_pro_job_name:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

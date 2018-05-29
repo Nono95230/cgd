@@ -1,0 +1,53 @@
+uuid: d11108d4-361c-4b49-b39b-4ecb57721841
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.d8_themes.field_class_btstrap_test_d8
+    - taxonomy.vocabulary.d8_themes
+  module:
+    - path
+    - text
+id: taxonomy_term.d8_themes.default
+targetEntityType: taxonomy_term
+bundle: d8_themes
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_class_btstrap_test_d8:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

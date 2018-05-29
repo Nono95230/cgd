@@ -1,0 +1,13 @@
+uuid: 6efc0fc1-bb28-4bbc-8337-ac9751ec3ed8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.news_d8
+_core:
+  default_config_hash: _zzaEIfhQstweh7wBQ8GHESzzVfA_nUGG52Sv7Eiif8
+id: node.news_d8
+target_entity_type_id: node
+target_bundle: news_d8
+default_langcode: site_default
+language_alterable: false

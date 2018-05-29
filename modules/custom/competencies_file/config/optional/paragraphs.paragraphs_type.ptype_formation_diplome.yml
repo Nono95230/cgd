@@ -1,0 +1,11 @@
+uuid: 07ecdc7d-0379-463a-872f-789ed8f2489f
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QArSYoCGKFOhYyFtZ9XcxOn11e2rs_wxxz2mXOFR7zI
+id: ptype_formation_diplome
+label: 'Formation & Diplôme'
+icon_uuid: null
+description: 'Ce paragraph type sert à paramétrer les champs servant à compléter la partie Formations & Diplômes du Dossier de Compétence'
+behavior_plugins: {  }

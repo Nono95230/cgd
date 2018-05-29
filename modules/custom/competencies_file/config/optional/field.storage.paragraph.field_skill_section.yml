@@ -1,0 +1,23 @@
+uuid: 101da3d2-6953-486b-9f1f-4b0094cfff3f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 4_0A6e85NeJPj4sqQkxfHYS8OgvtVPcvwncbhFcLN4U
+id: paragraph.field_skill_section
+field_name: field_skill_section
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

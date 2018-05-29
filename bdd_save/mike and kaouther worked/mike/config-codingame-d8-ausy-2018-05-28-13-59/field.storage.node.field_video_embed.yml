@@ -1,0 +1,29 @@
+uuid: 115bb338-4a7d-4ebd-9386-dbb318d6b760
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - node
+    - video
+_core:
+  default_config_hash: O9ERVM-8sGhGqap4aO4C0DXwuaJFurEa-DtI4s9kHqE
+id: node.field_video_embed
+field_name: field_video_embed
+entity_type: node
+type: video
+settings:
+  default_video:
+    uuid: null
+    data: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: video
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

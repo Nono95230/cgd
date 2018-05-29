@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencies_file_skill
+    - node.type.competencies_file
+    - paragraphs.paragraphs_type.ptype_competence_technique
+  module:
+    - entity_reference_revisions
+id: node.competencies_file.field_competencies_file_skill
+field_name: field_competencies_file_skill
+entity_type: node
+bundle: competencies_file
+label: 'Compétences techniques'
+description: 'Cette partie sert à saisir l''ensemble des informations liées à des compétences techniques'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ptype_competence_technique: ptype_competence_technique
+    target_bundles_drag_drop:
+      paragraphs_type_questions:
+        weight: 6
+        enabled: false
+      ptype_competence_technique:
+        enabled: true
+        weight: 7
+      ptype_experience_pro:
+        weight: 8
+        enabled: false
+      ptype_formation_diplome:
+        weight: 9
+        enabled: false
+      ptype_langue:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

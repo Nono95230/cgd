@@ -1,0 +1,22 @@
+uuid: 8af9224e-9ce8-43e4-83f7-6c00ec7a23fa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: kZAnXneXRdbeW9OmnO_4jtjtQUyk1DdIfXb-rZirhiQ
+id: node.field_dans_la_meme_rubrique
+field_name: field_dans_la_meme_rubrique
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

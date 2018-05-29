@@ -1,0 +1,20 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencies_file_xp_year
+    - node.type.competencies_file
+  module:
+    - datetime
+id: node.competencies_file.field_competencies_file_xp_year
+field_name: field_competencies_file_xp_year
+entity_type: node
+bundle: competencies_file
+label: 'Nombre d''année d''expérience'
+description: "Indiquer la date à laquelle vous avez commencé à pratiquer sur ce type de poste.\r\nUn calcul se fera pour déterminer votre nombre d'année d'expérience."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

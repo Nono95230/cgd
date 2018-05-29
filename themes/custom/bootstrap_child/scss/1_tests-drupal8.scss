@@ -1,0 +1,163 @@
+/* landing page des tests : /tests-drupal8 */
+
+a.test_d8-theme-select{
+display:block;
+padding:20px 10px;
+background:#f5f5f5;
+color:#333;
+text-align:center;
+}
+
+
+
+/* test : /test-drupal8/1 */
+
+.test_d8-question{
+margin:0 0 50px;
+}
+
+#test_d8-nav{
+position:absolute;
+bottom:0;
+left:50%;
+width:200px;
+transform:translateX(-50%);
+display:flex;
+}
+#test_d8-question-prev,
+#test_d8-question-next{
+flex:1;
+}
+#test_d8-question-prev[disabled],
+#test_d8-question-next[disabled]{
+pointer-events:none;
+}
+#test_d8-question-curr{
+display:block;
+padding:5px;
+margin:auto;
+text-align:center;
+flex:2;
+}
+#test_d8-submit{
+position:absolute;
+bottom:0;
+right:15px;
+}
+
+#test_d8-navisual{
+margin:0 0 20px;
+}
+.test_d8-navisual-item{
+display:block;
+width:20px;
+height:20px;
+border-radius:50%;
+line-height:20px;
+text-align:center;
+font-size:0.825em;
+cursor:pointer;
+float:left;
+margin:2px;
+color:#333;
+background:#eee;
+}
+.test_d8-navisual-item.answered{
+color:#fff;
+background:#3cf;
+}
+
+.test_d8-hidden{
+display:none;
+}
+
+
+
+/* compte à rebours page tests : /test-drupal8/1 */
+/* (le design doit rester le même, il correspond à celui des certifs officielles trained people) */
+#timer_qcm{
+float:right;
+font-size:28px;
+}
+.countdownHolder{
+/*width:450px;
+margin:0 auto;
+font:28px/1.5 'Open Sans Condensed',sans-serif;
+text-align:center;
+letter-spacing:-3px;*/
+}
+.position{
+display:inline-block;
+height:1.6em;
+overflow:hidden;
+position:relative;
+width:1.1em;
+}
+.digit{
+position:absolute;
+display:block;
+width:1em;
+background-color:#444;
+border-radius:0.2em;
+text-align:center;
+color:#fff;
+letter-spacing:-1px;
+}
+.digit.static{
+box-shadow:1px 1px 1px rgba(127, 127, 127, 0.5);
+background-image: linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -o-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -moz-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -webkit-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -ms-linear-gradient(bottom, #3A3A3A 50%, #444444 50%);
+background-image: -webkit-gradient(linear, left bottom, left top,
+	color-stop(0.5, #3A3A3A), color-stop(0.5, #444444));
+}
+.countWeeks,
+.countDiv0,
+.countDays,
+.countDiv1,
+.countHrs,
+.countDiv2{
+display:none !important;
+}
+.countDiv{
+display:inline-block;
+width:16px;
+height:1.6em;
+position:relative;
+}
+.countDiv:before,
+.countDiv:after{
+position:absolute;
+width:5px;
+height:5px;
+background-color:#444;
+border-radius:50%;
+left:50%;
+margin-left:-3px;
+top:0.5em;
+box-shadow:1px 1px 1px rgba(127, 127, 127, 0.5);
+content:'';
+}
+.countDiv:after{
+top:0.9em;
+}
+#timer_qcm-note{
+display:none;
+}
+
+
+
+/* résultats du test (graphique) : /user/1 */
+
+@import 'https://code.highcharts.com/css/highcharts.css';
+#charts{
+width:100%;
+height:400px;
+}
+/* doc : https://www.highcharts.com/docs/chart-design-and-style/style-by-css */
+.highcharts-background{
+fill:#f8f8f8;
+}
+

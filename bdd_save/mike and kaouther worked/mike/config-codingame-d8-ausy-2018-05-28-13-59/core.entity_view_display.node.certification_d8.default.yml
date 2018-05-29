@@ -1,0 +1,62 @@
+uuid: f7b63af9-0ed2-42da-bda7-b965f2996610
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.certification_d8.field_certificat
+    - field.field.node.certification_d8.field_date_passage
+    - field.field.node.certification_d8.field_score
+    - field.field.node.certification_d8.field_theme
+    - node.type.certification_d8
+  module:
+    - datetime
+    - file
+    - user
+_core:
+  default_config_hash: c-ZOegh0vON8U9OGUB-xPJnuntaooZHQxR5wFcvDkSw
+id: node.certification_d8.default
+targetEntityType: node
+bundle: certification_d8
+mode: default
+content:
+  field_certificat:
+    weight: 4
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_date_passage:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_score:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_theme:
+    weight: 1
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,78 @@
+uuid: e3bdfeda-45d0-40b0-8d9a-73948ba12078
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ptype_experience_pro.field_job_description
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_current_job
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_date_end
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_date_start
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_enterprise
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_environment_tech
+    - field.field.paragraph.ptype_experience_pro.field_xp_pro_job_name
+    - paragraphs.paragraphs_type.ptype_experience_pro
+  module:
+    - datetime
+    - text
+_core:
+  default_config_hash: eQl-ds6S6Q2o9b09eYkokMWMM_gufQ_6qzsXvEzd1CM
+id: paragraph.ptype_experience_pro.default
+targetEntityType: paragraph
+bundle: ptype_experience_pro
+mode: default
+content:
+  field_job_description:
+    weight: 5
+    settings:
+      rows: 20
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_xp_pro_current_job:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_xp_pro_date_end:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_xp_pro_date_start:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_xp_pro_enterprise:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_xp_pro_environment_tech:
+    weight: 6
+    settings:
+      size: 200
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_xp_pro_job_name:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

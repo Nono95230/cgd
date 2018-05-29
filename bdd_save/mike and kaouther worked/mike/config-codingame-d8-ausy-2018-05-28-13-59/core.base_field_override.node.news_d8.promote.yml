@@ -1,0 +1,24 @@
+uuid: 60a05fc7-cd38-4f25-836e-2edf0e443488
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.news_d8
+_core:
+  default_config_hash: 0LFWuHxIaLGOx01xrBJ3gcIVvQznemKQpbdw_vncZGI
+id: node.news_d8.promote
+field_name: promote
+entity_type: node
+bundle: news_d8
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

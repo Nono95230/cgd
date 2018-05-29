@@ -1,0 +1,47 @@
+uuid: bf959fad-9df1-476a-8ead-8a20398eb203
+langcode: fr
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: N8VbjOwC7gcnAbxQGwywW6S0hgFFfD3k5I0DTRbUzws
+id: paragraph.field_language_level
+field_name: field_language_level
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Scolaire
+    -
+      value: '2'
+      label: Notions
+    -
+      value: '3'
+      label: 'Bonnes notions'
+    -
+      value: '4'
+      label: Moyen
+    -
+      value: '5'
+      label: Technique
+    -
+      value: '6'
+      label: Courant
+    -
+      value: '7'
+      label: Expérimenté
+    -
+      value: '8'
+      label: 'Langue Maternelle'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

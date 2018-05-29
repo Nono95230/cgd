@@ -1,0 +1,25 @@
+uuid: 2ba94a54-628d-4343-90bb-7d302dba0653
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_score
+    - node.type.certification_d8
+_core:
+  default_config_hash: oCmG2fYT8gFXo-PEKD_gPns-8Y5URcmXCi4TrcGhrBk
+id: node.certification_d8.field_score
+field_name: field_score
+entity_type: node
+bundle: certification_d8
+label: Score
+description: 'Le score obtenu lors du passage de la certification, le score minimal de validation est de 70/100 ...'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

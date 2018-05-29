@@ -1,0 +1,22 @@
+uuid: 62f646d3-8dd1-4581-a050-0700464b4e37
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: rUqI1ki642NFTfVbSOy6LOCCR7PaJNgkcUA2nIr7k60
+id: node.field_date_passage
+field_name: field_date_passage
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

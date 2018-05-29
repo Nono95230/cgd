@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencies_file_language
+    - node.type.competencies_file
+    - paragraphs.paragraphs_type.ptype_langue
+  module:
+    - entity_reference_revisions
+id: node.competencies_file.field_competencies_file_language
+field_name: field_competencies_file_language
+entity_type: node
+bundle: competencies_file
+label: Langues
+description: 'Cette partie sert à saisir l''ensemble des informations liées à une langue'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ptype_langue: ptype_langue
+    target_bundles_drag_drop:
+      paragraphs_type_questions:
+        weight: 6
+        enabled: false
+      ptype_competence_technique:
+        weight: 7
+        enabled: false
+      ptype_experience_pro:
+        weight: 8
+        enabled: false
+      ptype_formation_diplome:
+        weight: 9
+        enabled: false
+      ptype_langue:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

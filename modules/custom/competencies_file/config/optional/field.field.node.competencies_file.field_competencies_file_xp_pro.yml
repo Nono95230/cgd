@@ -1,0 +1,42 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencies_file_xp_pro
+    - node.type.competencies_file
+    - paragraphs.paragraphs_type.ptype_experience_pro
+  module:
+    - entity_reference_revisions
+id: node.competencies_file.field_competencies_file_xp_pro
+field_name: field_competencies_file_xp_pro
+entity_type: node
+bundle: competencies_file
+label: 'Expériences Professionnelles'
+description: 'Cette partie sert à saisir l''ensemble des informations liées à une expérience professionnelle'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      ptype_experience_pro: ptype_experience_pro
+    target_bundles_drag_drop:
+      paragraphs_type_questions:
+        weight: 6
+        enabled: false
+      ptype_competence_technique:
+        weight: 7
+        enabled: false
+      ptype_experience_pro:
+        enabled: true
+        weight: 8
+      ptype_formation_diplome:
+        weight: 9
+        enabled: false
+      ptype_langue:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

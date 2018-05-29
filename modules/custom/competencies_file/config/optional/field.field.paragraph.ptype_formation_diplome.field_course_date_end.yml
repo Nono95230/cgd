@@ -1,0 +1,23 @@
+uuid: c1a9dd52-f7a5-423d-853b-bf4794607a56
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_course_date_end
+    - paragraphs.paragraphs_type.ptype_formation_diplome
+  module:
+    - datetime
+_core:
+  default_config_hash: c3P7xySa3ryg299W9jvZ2QIh6hSDEWTJOlbzMbafC-I
+id: paragraph.ptype_formation_diplome.field_course_date_end
+field_name: field_course_date_end
+entity_type: paragraph
+bundle: ptype_formation_diplome
+label: 'Date de fin'
+description: 'Indiquer ici le mois et l''année de fin de votre formation'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

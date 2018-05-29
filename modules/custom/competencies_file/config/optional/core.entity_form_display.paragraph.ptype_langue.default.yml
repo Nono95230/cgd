@@ -1,0 +1,34 @@
+uuid: 433724d2-f35a-4094-82be-61d310865a3d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ptype_langue.field_language_level
+    - field.field.paragraph.ptype_langue.field_language_name
+    - paragraphs.paragraphs_type.ptype_langue
+_core:
+  default_config_hash: Th0WRtlgtx5b4Oy9RFZlWaTVmLDbvsjDgwscGIX2Q18
+id: paragraph.ptype_langue.default
+targetEntityType: paragraph
+bundle: ptype_langue
+mode: default
+content:
+  field_language_level:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_language_name:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: Anglais
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

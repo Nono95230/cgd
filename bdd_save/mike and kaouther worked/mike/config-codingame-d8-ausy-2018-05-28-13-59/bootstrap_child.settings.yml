@@ -1,0 +1,23 @@
+favicon:
+  mimetype: image/png
+  path: 'public://logo_0.png'
+  url: 'https://dev-54ta5gq-ggk6gmdzxk3la.eu.platform.sh/sites/default/files/logo_0.png'
+  use_default: 0
+schemas:
+  bootstrap: 8000
+  bootstrap_child: 8000
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: 'public://logo.png'
+  url: ''
+  use_default: 0
+table_responsive: '-1'
+table: ''
+cdn_jsdelivr_theme: flatly
+fluid_container: 0
+table_bordered: 1
+langcode: fr

@@ -1,0 +1,23 @@
+uuid: aff1d530-f331-4071-8bb4-45193dc49175
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_job_description
+    - paragraphs.paragraphs_type.ptype_experience_pro
+  module:
+    - text
+_core:
+  default_config_hash: dwyotU_YyqgN9gMS4-5ZRN6RIf0kRGeI23sqIFUpxw4
+id: paragraph.ptype_experience_pro.field_job_description
+field_name: field_job_description
+entity_type: paragraph
+bundle: ptype_experience_pro
+label: 'Description de la mission'
+description: 'Renseignez ici le détails de votre mission, les tâches accomplies, le contexte du projet, etc...'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

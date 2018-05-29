@@ -1,0 +1,52 @@
+base:
+  css:
+    theme:
+      css/style.css: {}
+
+login-page:
+  css:
+    theme:
+      css/login-page.css: {}
+      
+#Certification_D8
+2_certification-blocks:
+  css:
+    theme:
+      css/2_certification-blocks.css: {}
+login:
+  css:
+    theme:
+      css/1_login.css: {}
+
+# Tests D8
+test-drupal8-styles:
+  version: VERSION
+  css:
+    theme:
+      css/1_tests-drupal8.css: {}
+
+test-drupal8-qcm:
+  version: VERSION
+  js:
+    js/timer-qcm-test-drupal8.js: {}
+    js/qcm-test-drupal8.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+
+tests-drupal8-dashboard:
+  version: VERSION
+  js:
+    https://code.highcharts.com/stock/highstock.js: { minified: true, external: true }
+    js/user-dashboard-tests-drupal8.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+# Evenements
+evenement:
+  css:
+    theme:
+      css/1_evenement.css: {}

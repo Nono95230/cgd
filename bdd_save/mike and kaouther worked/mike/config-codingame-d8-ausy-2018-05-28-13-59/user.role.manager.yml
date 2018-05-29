@@ -1,0 +1,11 @@
+uuid: c3498e9c-691b-44c2-b3bb-49f0a766fbca
+langcode: fr
+status: true
+dependencies: {  }
+id: manager
+label: Manager
+weight: -8
+is_admin: null
+permissions:
+  - 'access user profiles'
+  - 'view certification_d8 revisions'

@@ -1,0 +1,22 @@
+uuid: 62a8f00c-ee9d-4ec6-86b0-e1fe7a870cf4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - user
+_core:
+  default_config_hash: I2u61oJUuAbcxRmOq4Inq5LONLgdOY5Se9APc9PuQL0
+id: node.field_organisateurs
+field_name: field_organisateurs
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 04d5f077-61c8-4c36-b57d-2131c308f59d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.evenement
+_core:
+  default_config_hash: xhLudlDPkmW5WyymjjWvlr2JQGfchZ8mA4HhuKx4XrQ
+id: node.evenement.promote
+field_name: promote
+entity_type: node
+bundle: evenement
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

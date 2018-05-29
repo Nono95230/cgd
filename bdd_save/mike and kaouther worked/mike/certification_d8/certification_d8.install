@@ -1,0 +1,54 @@
+<?php
+
+/** @file ...*/
+
+use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\NodeType;
+use Drupal\node\Entity\Node;
+
+
+function certification_d8_install(){
+
+	// Nom du vocabulaire
+	$vocabularyMachineName = 'd8_themes';
+	$vocabularies = Vocabulary::loadMultiple();
+
+	// On vérifie que le vocabulaire en question existe bien
+	if (isset($vocabularies[$vocabularyMachineName])) {
+
+		// Tableau listant les termes à créer
+		$termsTheme = ['Webmaster',
+									 'Themer',
+									 'Développement',
+									 'Expert'];
+
+		// Récupère les termes du vocabulaire en question(s'ils existent)
+		$properties['vid'] = $vocabularyMachineName;
+		$terms = \Drupal::entityManager()->getStorage('taxonomy_term')->loadByProperties($properties);
+
+		// Avant de créer les termes à la volée,
+		// on vérifie qu'il n'existe pas avant.
+		foreach ((array)$terms as $term) {
+			// S'il trouve des correspondances :
+			if ( ($key = array_search($term->getName(), $termsThemes)) !== false) {
+				// alors on retire ces termes du tableau
+				unset($termsThemes[$key]);
+			}
+		}
+
+		// Poids des termes
+		$weight = 0;
+
+		// On crée les termes si nécessaire
+		foreach ((array)$termsThemes as $term_name) {
+			$term = Term::create([
+				'vid' => $vocabularyMachineName,
+				'name' => $term_name,
+				'weight' => $weight
+			]);
+			$term->save();
+			$weight++;
+		}
+	}
+}

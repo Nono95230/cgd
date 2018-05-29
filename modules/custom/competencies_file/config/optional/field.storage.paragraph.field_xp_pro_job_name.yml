@@ -1,0 +1,23 @@
+uuid: b3e6ff5a-d14f-4686-bcec-d8bd896ad355
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: wtENaN-omEIceiZc0dKFbQEVK4-XkORXth-X6ePMjgo
+id: paragraph.field_xp_pro_job_name
+field_name: field_xp_pro_job_name
+entity_type: paragraph
+type: string
+settings:
+  max_length: 150
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

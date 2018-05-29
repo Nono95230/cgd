@@ -1,0 +1,20 @@
+uuid: 345817b9-e87d-4b71-9339-577834581891
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: QoD4VOpW0g4f9Qfz0JsERReziEo8cotfsSpULQxmAJ8
+name: Evénement
+type: evenement
+description: 'liste de tous les evenements'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

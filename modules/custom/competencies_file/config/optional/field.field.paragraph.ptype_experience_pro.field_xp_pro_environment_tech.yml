@@ -1,0 +1,21 @@
+uuid: 16bf68bc-df39-427e-af30-16fafbb5a89c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_xp_pro_environment_tech
+    - paragraphs.paragraphs_type.ptype_experience_pro
+_core:
+  default_config_hash: i7bFgR-2p9nHuGUyP9YO01HtJtASXkwjAAjMKc9Ae1U
+id: paragraph.ptype_experience_pro.field_xp_pro_environment_tech
+field_name: field_xp_pro_environment_tech
+entity_type: paragraph
+bundle: ptype_experience_pro
+label: 'Environnement technique'
+description: 'Indiquez l''environnement technique que vous avez utilisé durant la mission'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

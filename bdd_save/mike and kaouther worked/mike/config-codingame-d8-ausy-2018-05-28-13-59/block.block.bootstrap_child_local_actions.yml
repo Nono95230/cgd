@@ -1,0 +1,20 @@
+uuid: 334b31fa-b60a-4684-aa87-dbf7a193d678
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - bootstrap_child
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bootstrap_child_local_actions
+theme: bootstrap_child
+region: content
+weight: -8
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Actions d''administration principales'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: c14fe7be-6549-44c8-b778-96741a1371c4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_xp_pro_current_job
+    - paragraphs.paragraphs_type.ptype_experience_pro
+_core:
+  default_config_hash: YpML1MFZt7Nk8bXUgkzP8LU03ZZSly65ZDYvJ1_nyBc
+id: paragraph.ptype_experience_pro.field_xp_pro_current_job
+field_name: field_xp_pro_current_job
+entity_type: paragraph
+bundle: ptype_experience_pro
+label: 'Poste actuel'
+description: "Cochez cette case si cette mission est toujours d'actualité.\r\nSi vous cochez cette case, alors vous n'avez pas de date de fin à renseigner"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

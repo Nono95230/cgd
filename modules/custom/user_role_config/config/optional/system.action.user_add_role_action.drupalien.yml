@@ -1,0 +1,13 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.drupalien
+  module:
+    - user
+id: user_add_role_action.drupalien
+label: 'Ajouter le rôle Drupalien aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: drupalien

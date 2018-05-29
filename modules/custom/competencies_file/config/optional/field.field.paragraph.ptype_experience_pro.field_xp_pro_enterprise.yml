@@ -1,0 +1,21 @@
+uuid: 00755622-8245-49b7-b66b-c37b7c7e9ff9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_xp_pro_enterprise
+    - paragraphs.paragraphs_type.ptype_experience_pro
+_core:
+  default_config_hash: KyyKISx-yhzpT7ovKOooPf7b5-_D4cEeDYTxHKxljx4
+id: paragraph.ptype_experience_pro.field_xp_pro_enterprise
+field_name: field_xp_pro_enterprise
+entity_type: paragraph
+bundle: ptype_experience_pro
+label: Entreprise
+description: 'Indiquez l''entreprise où la mission est/était réalisé'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

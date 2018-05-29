@@ -1,0 +1,31 @@
+uuid: ffac4c87-f95a-47a9-8876-650cb196876a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ptype_competence_technique.field_skill_competences
+    - field.field.paragraph.ptype_competence_technique.field_skill_section
+    - paragraphs.paragraphs_type.ptype_competence_technique
+_core:
+  default_config_hash: p_TAmGlK6RKZhiMXMYxlAwcMrNs4X0Z4Z6ArIko1yGE
+id: paragraph.ptype_competence_technique.default
+targetEntityType: paragraph
+bundle: ptype_competence_technique
+mode: default
+content:
+  field_skill_competences:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_skill_section:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

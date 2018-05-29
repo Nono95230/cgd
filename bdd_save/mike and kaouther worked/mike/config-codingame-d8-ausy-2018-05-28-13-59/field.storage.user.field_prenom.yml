@@ -1,0 +1,23 @@
+uuid: e35fba87-4259-46b8-ad60-fddd6961ac36
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: UoekvLDOvor_8WjreimWC_0S8Ut32O7ukQqnI73y5tk
+id: user.field_prenom
+field_name: field_prenom
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

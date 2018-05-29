@@ -1,0 +1,209 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.news_d8.field_audio
+    - field.field.node.news_d8.field_body
+    - field.field.node.news_d8.field_comments
+    - field.field.node.news_d8.field_links_documents
+    - field.field.node.news_d8.field_picture
+    - field.field.node.news_d8.field_tags
+    - field.field.node.news_d8.field_video_embed
+    - field.field.node.news_d8.field_video_upload
+    - field.field.node.news_d8.field_video_upload_or_embed
+    - image.style.thumbnail
+    - node.type.news_d8
+  module:
+    - autocomplete_deluxe
+    - comment
+    - conditional_fields
+    - file
+    - image
+    - path
+    - text
+    - video
+id: node.news_d8.default
+targetEntityType: node
+bundle: news_d8
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_audio:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_body:
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_comments:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_links_documents:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_picture:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tags:
+    weight: 7
+    settings:
+      limit: '10'
+      min_length: '1'
+      delimiter: ;
+      not_found_message_allow: '1'
+      not_found_message: 'Cliquez pour ajouter le tag ''@term'''
+      new_terms: '1'
+      match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      target_type: taxonomy_term
+      size: 60
+      selection_handler: default
+    third_party_settings: {  }
+    type: autocomplete_deluxe
+    region: content
+  field_video_embed:
+    weight: 11
+    settings:
+      allowed_providers:
+        vimeo: vimeo
+        youtube: youtube
+        dailymotion: dailymotion
+        instagram: 0
+        vine: 0
+        facebook: 0
+      file_directory: 'news/video/embed/[date:custom:Y]-[date:custom:m]/[date:custom:d]'
+      uri_scheme: public
+    third_party_settings:
+      conditional_fields:
+        87bcde5c-bee7-419c-9db2-d2aaf0005e6d:
+          dependee: field_video_upload_or_embed
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: embed
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: news_d8
+    type: video_embed
+    region: content
+  field_video_upload:
+    weight: 10
+    settings:
+      file_extensions: 'mp4 ogv webm avi mov mpg mpa mpeg mkv ogg amv'
+      file_directory: 'news/video/upload/[date:custom:Y]-[date:custom:m]/[date:custom:d]'
+      max_filesize: '8 MB'
+      uri_scheme: public
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        67d8e39c-dfd5-49ae-b03f-95a991b9f281:
+          dependee: field_video_upload_or_embed
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: upload
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: news_d8
+    type: video_upload
+    region: content
+  field_video_upload_or_embed:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 3
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 14
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

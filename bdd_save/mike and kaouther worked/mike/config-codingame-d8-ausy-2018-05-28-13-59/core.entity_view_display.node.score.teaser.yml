@@ -1,0 +1,25 @@
+uuid: 9719fbb9-c688-4197-b8af-2789a95c3fe4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.score.field_score_nid
+    - field.field.node.score.field_score_result
+    - node.type.score
+  module:
+    - user
+_core:
+  default_config_hash: Me4yZHPr2zoJoYX3o-rBAUpINESMddczqXX_lJ5koVY
+id: node.score.teaser
+targetEntityType: node
+bundle: score
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_score_nid: true
+  field_score_result: true
+  langcode: true

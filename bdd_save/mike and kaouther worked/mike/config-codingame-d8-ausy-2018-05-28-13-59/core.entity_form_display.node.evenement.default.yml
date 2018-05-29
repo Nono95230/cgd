@@ -1,0 +1,150 @@
+uuid: a551a856-4d5e-46ec-8074-32f05976f559
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.evenement.field_adresse
+    - field.field.node.evenement.field_comments
+    - field.field.node.evenement.field_dans_la_meme_rubrique
+    - field.field.node.evenement.field_date
+    - field.field.node.evenement.field_description
+    - field.field.node.evenement.field_lieu
+    - field.field.node.evenement.field_organisateurs
+    - field.field.node.evenement.field_photo_s_
+    - field.field.node.evenement.field_video_s_
+    - image.style.thumbnail
+    - node.type.evenement
+  module:
+    - address
+    - comment
+    - datetime
+    - geolocation
+    - image
+    - path
+    - text
+    - video_embed_field
+_core:
+  default_config_hash: s97_XeGvPg3MFWcHbZ0ij5VVZ6fa1uvbwROCbQbVvBg
+id: node.evenement.default
+targetEntityType: node
+bundle: evenement
+mode: default
+content:
+  field_adresse:
+    weight: 6
+    settings:
+      default_longitude: ''
+      default_latitude: ''
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: ROADMAP
+        zoom: '10'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      auto_client_location: '0'
+      auto_client_location_marker: '0'
+      allow_override_map_settings: 0
+      populate_address_field: ''
+      target_address_field: null
+      explicite_actions_address_field: ''
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
+    region: content
+  field_comments:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_dans_la_meme_rubrique:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_description:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_lieu:
+    weight: 3
+    settings:
+      default_country: FR
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_organisateurs:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_photo_s_:
+    weight: 7
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_video_s_:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 0
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  status: true
+  sticky: true
+  uid: true

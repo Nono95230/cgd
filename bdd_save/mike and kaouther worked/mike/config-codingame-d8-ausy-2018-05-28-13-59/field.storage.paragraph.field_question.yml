@@ -1,0 +1,21 @@
+uuid: f0e86bda-474f-4b2a-9236-1a7c4ccb3e2b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: YoCiy8ca1AXuniKnrSmAvwmYk94woR8kwEpMfhO1LwU
+id: paragraph.field_question
+field_name: field_question
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

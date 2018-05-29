@@ -1,0 +1,21 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - node.type.news_d8
+  module:
+    - text
+id: node.news_d8.field_body
+field_name: field_body
+entity_type: node
+bundle: news_d8
+label: Description
+description: 'La description de l''actualité courante'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

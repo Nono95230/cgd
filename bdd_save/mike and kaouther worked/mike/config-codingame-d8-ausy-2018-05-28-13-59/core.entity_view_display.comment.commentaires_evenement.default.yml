@@ -1,0 +1,16 @@
+uuid: 5310ff61-2c61-45ed-8182-9d4e975d556e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - comment.type.commentaires_evenement
+_core:
+  default_config_hash: eujOotWTry3Hte5NoxKUDn9TlAtfmjkelVNvDam_yQU
+id: comment.commentaires_evenement.default
+targetEntityType: comment
+bundle: commentaires_evenement
+mode: default
+content: {  }
+hidden:
+  langcode: true
+  links: true

@@ -1,0 +1,22 @@
+uuid: a48ea884-f8d2-4f4f-8441-db00b510c8b7
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - bootstrap_child
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: bootstrap_child_local_tasks
+theme: bootstrap_child
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Onglets
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
