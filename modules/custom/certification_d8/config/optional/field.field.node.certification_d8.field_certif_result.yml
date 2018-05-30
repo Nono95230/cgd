@@ -1,0 +1,22 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certif_result
+    - node.type.certification_d8
+id: node.certification_d8.field_certif_result
+field_name: field_certif_result
+entity_type: node
+bundle: certification_d8
+label: Résultat
+description: 'Renseignez le score que vous avez obtenu'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: !!float 100
+  prefix: ''
+  suffix: ' %'
+field_type: decimal

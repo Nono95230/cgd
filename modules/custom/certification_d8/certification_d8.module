@@ -1,0 +1,56 @@
+<?php
+
+use Drupal\user\Entity\User;
+
+function certification_d8_form_alter(&$form, &$form_state, $form_id) {
+
+	$form['field_date_passage']['#after_build'] = array('max_date');
+
+	if(isset($form['sort_order'])){
+		$form['sort_order']['#type'] = FALSE;
+	}
+
+	$current_user_name = \Drupal::currentUser()->getUsername();
+			
+	if($form_id == 'node_certification_d8_form' || $form_id == 'node_certification_d8_edit_form'){
+	   $form['field_date_passage']['#after_build'] = array('max_date');
+ 
+		$userRole = \Drupal::currentUser()->getRoles();
+			//kint($userRole);
+
+	
+		// Cache le menu  en ajout et modification et lui attribuer le nom de l'utilisateur par default
+		$title_widget = &$form['title']['widget'][0];
+		//$default = (!empty($title_widget['value']['#default_value'])? $title_widget['value']['#default_value'] :'Certification');
+		$default = $title_widget['value']['#default_value'] ?:'Certification';
+		$title_widget['value']['#default_value'] = $default;
+		$title_widget['value']['#type'] = 'value';
+		$title_widget['value']['#required'] = FALSE;
+		$title_widget['revision_information']['#access'] = FALSE;
+		$form['title']['#access'] = FALSE;
+		$form['actions']['preview']['#access']    = FALSE;
+		$form['revision']['#access'] = FALSE;
+		$form['revision_information']['#access'] = FALSE;
+
+	}
+}
+
+
+function certification_d8_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+}
+
+function certification_d8_user_presave(Drupal\user\Entity\User $user) {
+  if ($user->isNew() && !$user->hasRole('drupalien')) {
+    $admin = FALSE;
+    if (!$admin) {
+      $user->addRole('drupalien');
+    }
+  }
+}
+
+function max_date($element){
+$date = date('Y-m-d');	
+	$element['widget']['0']['value']['date']['#attributes'] = ['max'=>$date];
+	return $element;
+}
+

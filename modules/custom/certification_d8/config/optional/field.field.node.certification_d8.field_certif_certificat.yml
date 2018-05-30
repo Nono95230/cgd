@@ -1,0 +1,26 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certif_certificat
+    - node.type.certification_d8
+  module:
+    - file
+id: node.certification_d8.field_certif_certificat
+field_name: field_certif_certificat
+entity_type: node
+bundle: certification_d8
+label: Certificat
+description: 'Importez le justificatif de votre certificat. Il sera visible et téléchargeable pour les managers.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'certificates/[date:custom:Y]-[date:custom:m]-[date:custom:d]'
+  file_extensions: pdf
+  max_filesize: 1MB
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

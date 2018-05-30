@@ -1,0 +1,8 @@
+name: certification_d8
+type: module
+description: 'Module de base pour les "hook" du module certification_d8 game D8'
+core: 8.x
+package: Custom
+
+
+

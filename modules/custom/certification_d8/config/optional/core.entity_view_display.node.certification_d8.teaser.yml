@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.certification_d8
+  module:
+    - user
+id: node.certification_d8.teaser
+targetEntityType: node
+bundle: certification_d8
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

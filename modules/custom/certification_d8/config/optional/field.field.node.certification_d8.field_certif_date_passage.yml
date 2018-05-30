@@ -1,0 +1,23 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_certif_date_passage
+    - node.type.certification_d8
+  module:
+    - datetime
+id: node.certification_d8.field_certif_date_passage
+field_name: field_certif_date_passage
+entity_type: node
+bundle: certification_d8
+label: 'Date de passage'
+description: 'Insérez la date à laquelle vous avez passé cette certification.'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
