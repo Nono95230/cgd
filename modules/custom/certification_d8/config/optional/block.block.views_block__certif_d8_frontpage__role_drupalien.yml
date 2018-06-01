@@ -1,0 +1,38 @@
+uuid: 94b10a9c-c5ec-42d0-8393-dbe954a5739b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.certification_d8
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__certif_d8_frontpage__role_drupalien
+theme: bootstrap_child
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:certification_d8-frontpage__role_drupalien__les_3_derniers_certifies'
+settings:
+  id: 'views_block:certification_d8-frontpage__role_drupalien__les_3_derniers_certifies'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      drupalien: drupalien
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -2,7 +2,7 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 //use Drupal\editor\Entity\Editor;
-//use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\FormStateInterface;
 //use Drupal\views\ViewExecutable;
 
 /**
@@ -29,3 +29,11 @@ function test_d8_preprocess_html(&$variables){
   $variables['#attached']['drupalSettings']['TestD8']['number_of_questions'] = $settings->get('number_of_questions');
 }
 
+
+
+function test_d8_form_alter(&$form, FormStateInterface $form_state, $form_id){
+  // Cela permet d'activer les fonctionnalités de ckeditor au sein de views dans certains/tous les champs..
+ if ($form_id == 'views_ui_config_item_form' && !empty($form['options']['content'])) {
+   $form['options']['content']['#editor'] = TRUE;
+ }
+}

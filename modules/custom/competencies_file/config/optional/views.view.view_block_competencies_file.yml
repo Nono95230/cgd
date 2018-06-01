@@ -5,11 +5,12 @@ dependencies:
   config:
     - node.type.competencies_file
     - user.role.drupalien
+    - user.role.manager
   module:
     - node
     - user
 _core:
-  default_config_hash: LqsfVqLnzZQaKCk3kWAWE9id3JOJg5NZ1D0Sa77-Wts
+  default_config_hash: UUFDIabyIZ1IEDhoMCqiKDgbpx5Ex2V5X-OAJDih-NI
 id: view_block_competencies_file
 label: 'Dossier de compétences'
 module: views
@@ -29,6 +30,7 @@ display:
         type: role
         options:
           role:
+            manager: manager
             drupalien: drupalien
       cache:
         type: tag
@@ -245,10 +247,10 @@ display:
         - 'user.node_grants:view'
         - user.roles
       tags: {  }
-  block_1:
+  userpage__two_roles__dossier_de_competences:
     display_plugin: block
-    id: block_1
-    display_title: 'Block UserPage - Dossier de compétences - Drupalien'
+    id: userpage__two_roles__dossier_de_competences
+    display_title: 'Page de profil - 2 Rôles - Dossier de compétences'
     position: 1
     display_options:
       display_extenders: {  }
@@ -256,7 +258,7 @@ display:
       allow:
         items_per_page: true
       display_description: 'Ce bloc affiche un lien vers le dossier de compétences et un autre lien pour l''éditer'
-      block_description: 'Dossier de compétences'
+      block_description: 'Page de profil - 2 Rôles - Dossier de compétences'
     cache_metadata:
       max-age: -1
       contexts:

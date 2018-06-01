@@ -1,0 +1,40 @@
+uuid: 441da106-fa05-48c6-b72e-c958e61d4e3f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.tests_drupal_8
+  module:
+    - route_condition
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__tests_drupal_8_userpage__two_roles__list_score_test
+theme: bootstrap_child
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:tests_drupal_8-userpage__two_roles__list_score_test'
+settings:
+  id: 'views_block:tests_drupal_8-userpage__two_roles__list_score_test'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  route:
+    id: route
+    routes: entity.user.canonical
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+      drupalien: drupalien
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

@@ -1,0 +1,39 @@
+uuid: 9e22ee72-2a04-4f04-a348-9ccd37e75383
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.certification_d8
+  module:
+    - route_condition
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__certif_d8_userpage__two_roles__list_certification
+theme: bootstrap_child
+region: content
+weight: 4
+provider: null
+plugin: 'views_block:certification_d8-userpage__two_roles__list_certification_by_user'
+settings:
+  id: 'views_block:certification_d8-userpage__two_roles__list_certification_by_user'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+      drupalien: drupalien
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  route:
+    id: route
+    routes: entity.user.canonical
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,38 @@
+uuid: 696ab33d-8f14-41db-be98-d8a7535efcd1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.tests_drupal_8
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__tests_d8_frontpage__role_manager__tous_les_consulta
+theme: bootstrap_child
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:tests_drupal_8-frontpage__role_manager__tous_les_consultants__tests'
+settings:
+  id: 'views_block:tests_drupal_8-frontpage__role_manager__tous_les_consultants__tests'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

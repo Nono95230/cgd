@@ -1,0 +1,40 @@
+uuid: 6ca0244d-d6fb-48ba-be43-b11f570b285a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.view_block_competencies_file
+  module:
+    - route_condition
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__userpage__two_roles__dossier_de_competences
+theme: bootstrap_child
+region: content
+weight: 5
+provider: null
+plugin: 'views_block:view_block_competencies_file-userpage__two_roles__dossier_de_competences'
+settings:
+  id: 'views_block:view_block_competencies_file-userpage__two_roles__dossier_de_competences'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  route:
+    id: route
+    routes: entity.user.canonical
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+      drupalien: drupalien
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

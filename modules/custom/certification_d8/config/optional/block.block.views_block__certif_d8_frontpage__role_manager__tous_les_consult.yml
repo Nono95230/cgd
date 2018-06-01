@@ -1,0 +1,38 @@
+uuid: 8fd24096-52e4-436f-9a50-e00502af22fc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.certification_d8
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__certif_d8_frontpage__role_manager__tous_les_consult
+theme: bootstrap_child
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:certification_d8-frontpage__role_manager__tous_les_consultants__certifications'
+settings:
+  id: 'views_block:certification_d8-frontpage__role_manager__tous_les_consultants__certifications'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

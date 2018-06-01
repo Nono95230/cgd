@@ -1,0 +1,39 @@
+uuid: a1b5a5d6-35c2-42c2-92b8-32faffb7f565
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.tests_drupal_8
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - bootstrap_child
+id: views_block__tests_d8_frontpage__role_manager__mes_consultants
+theme: bootstrap_child
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:tests_drupal_8-frontpage__role_manager__mes_consultants__score_test'
+settings:
+  id: 'views_block:tests_drupal_8-frontpage__role_manager__mes_consultants__score_test'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      manager: manager
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

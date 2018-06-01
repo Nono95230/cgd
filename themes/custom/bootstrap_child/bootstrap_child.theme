@@ -39,8 +39,8 @@ function bootstrap_child_page_attachments_alter(array &$attachments){
   /////////////////////////////////////////
 
   if ($routeName == 'test_drupal8.qcm' ||
-    $routeName == 'view.tests_drupal_8.page_1' ||
-    $routeName == 'view.tests_drupal_8.page_2' ||
+    $routeName == 'view.tests_drupal_8.list_tests_d8__role_drupalien' ||
+    $routeName == 'view.tests_drupal_8.instructions_avant_tests_d8__role_drupalien' ||
     $routeName == 'entity.user.canonical' )
   {
     $attachments['#attached']['library'][] = 'bootstrap_child/test-drupal8-styles';
