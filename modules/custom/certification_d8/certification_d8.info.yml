@@ -1,8 +1,9 @@
-name: certification_d8
-type: module
-description: 'Module de base pour les "hook" du module certification_d8 game D8'
-core: 8.x
+name: Certification Drupal 8
+description: 'Ce module contient toutes les configurations nécessaire au bon fonctionnement de la partie Certification Drupal 8, ainsi que des fonctionnalités additionnelles'
 package: Custom
+type: module
+version: VERSION
+core: '8.x'
 
 
 

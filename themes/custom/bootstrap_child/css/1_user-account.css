@@ -4,31 +4,31 @@
 }
 
 /* line 16, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row {
   display: flex;
   padding: 5px 5px 0px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
 /* line 23, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row .views-field-view-node {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row .views-field-view-node {
   flex: 2.5;
 }
 /* line 25, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row .views-field-view-node a {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row .views-field-view-node a {
   font-size: 18px;
 }
 /* line 29, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row .views-field-edit-node {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row .views-field-edit-node {
   flex: 1;
   text-align: right;
 }
 /* line 32, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row .views-field-edit-node a {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row .views-field-edit-node a {
   visibility: hidden;
 }
 /* line 34, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row .views-field-edit-node a:after {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row .views-field-edit-node a:after {
   visibility: visible;
   background-image: url("../images/edit_pencil.png");
   background-size: 24px 24px;
@@ -38,6 +38,6 @@
   content: "";
 }
 /* line 44, ../scss/1_user-account.scss */
-#block-views-block-view-block-competencies-file-block-1 .views-row .views-field-edit-node a:hover:after {
+#block-views-block-userpage-two-roles-dossier-de-competences .views-row .views-field-edit-node a:hover:after {
   background-image: url("../images/edit_pencil_hover.png");
 }

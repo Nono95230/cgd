@@ -1,5 +1,5 @@
 name: Competencies File
-description: 'Ce module contient toutes les configurations nécessaire au bon fonctionnement de la partie Dossier de Compétences'
+description: 'Ce module contient toutes les configurations nécessaire au bon fonctionnement de la partie Dossier de Compétences, ainsi que des fonctionnalités additionnelles'
 package: Custom
 dependencies:
   - paragraphs (>=8.x-1.2)

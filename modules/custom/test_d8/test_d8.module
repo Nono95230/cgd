@@ -3,6 +3,7 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 //use Drupal\editor\Entity\Editor;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
 //use Drupal\views\ViewExecutable;
 
 /**
@@ -37,3 +38,37 @@ function test_d8_form_alter(&$form, FormStateInterface $form_state, $form_id){
    $form['options']['content']['#editor'] = TRUE;
  }
 }
+
+
+function test_d8_node_presave(EntityInterface $entity) {
+
+  // On vérifie qu'il s'agit de l'enregistrement
+  // d'un contenu de type score
+  if ( 'score' == $entity->getType() ) {
+
+    // On récupère certaines informations du contenu
+    // afin de constituer un titre parlant
+    $testId = $entity->get('field_score_nid')->getString();
+    $testThemeId = node_load($testId)->get('field_theme')->getString();
+    $themeName = taxonomy_term_load($testThemeId)->getName();
+
+    $scoreDate = format_date($entity->getCreatedTime(), 'format_date_classique');
+
+    $scoreScore = $entity->get('field_score_result')->getString();
+
+    $scoreUser = user_load($entity->getOwnerId());
+    $scoreUserFirstName = $scoreUser->get('field_prenom')->getString();
+    $scoreUserLastName = $scoreUser->get('field_nom')->getString();
+    $scoreUserName = $scoreUserFirstName . ' ' . $scoreUserLastName;
+
+
+    // On défini le nouveau titre
+    $scoreTitle  = 'Test '. $themeName;
+    $scoreTitle .= ' - '. $scoreUserName;
+    $scoreTitle .= ' - ' . $scoreDate;
+    $scoreTitle .= ' - Score : ' . $scoreScore . ' %';
+
+    $entity->setTitle($scoreTitle);
+  }
+}
+

@@ -4,8 +4,36 @@ use Drupal\Core\Entity\EntityInterface;
 
 
 function certification_d8_node_presave(EntityInterface $entity) {
-	kint($entity);
-	die();
+
+	// On vérifie qu'il s'agit de l'enregistrement
+	// d'un contenu de type certification
+	if ( 'certification_d8' == $entity->getType() ) {
+
+		// On récupère certaines informations du contenu
+		// afin de constituer un titre parlant
+		$certifThemeId = $entity->get('field_certif_theme')->getString();
+		$certifName = taxonomy_term_load($certifThemeId)->getName();
+
+    //$scoreDate = format_date($entity->getCreatedTime(), 'format_date_classique');
+		$certifTime = strtotime($entity->get('field_certif_date_passage')->getString());
+		$certifDate = format_date($certifTime, 'format_date_classique');
+
+		$certifScore = $entity->get('field_certif_result')->getString();
+
+		$certifUser = user_load($entity->getOwnerId());
+		$certifUserFirstName = $certifUser->get('field_prenom')->getString();
+		$certifUserLastName = $certifUser->get('field_nom')->getString();
+		$certifUserName = $certifUserFirstName . ' ' . $certifUserLastName;
+
+
+		// On défini le nouveau titre
+		$certifTitle  = 'Certification '. $certifName;
+		$certifTitle .= ' - '. $certifUserName;
+		$certifTitle .= ' - ' . $certifDate;
+		$certifTitle .= ' - Score : ' . $certifScore . ' %';
+
+		$entity->setTitle($certifTitle);
+	}
 }
 
 
